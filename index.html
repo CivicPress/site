@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
+  <title>CivicPress Manifesto - Open Source Civic Technology Platform</title>
+  <meta name="title" content="CivicPress Manifesto - Open Source Civic Technology Platform">
+  <meta name="description" content="Read the CivicPress Manifesto — our vision for open, transparent, and collaborative civic technology that empowers communities and strengthens democracy.">
+  <meta name="keywords" content="civic technology, open source, democracy, transparency, community engagement, civic participation, government technology">
+  <meta name="author" content="CivicPress">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://civic-press.org">
+
+  <!-- Open Graph - Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://civic-press.org">
+  <meta property="og:title" content="CivicPress Manifesto - Open Source Civic Technology Platform">
+  <meta property="og:description" content="Read the CivicPress Manifesto — our vision for open, transparent, and collaborative civic technology that empowers communities and strengthens democracy.">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="CivicPress">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://civic-press.org">
+  <meta name="twitter:title" content="CivicPress Manifesto - Open Source Civic Technology Platform">
+  <meta name="twitter:description" content="Read the CivicPress Manifesto — our vision for open, transparent, and collaborative civic technology that empowers communities and strengthens democracy.">
+  <meta name="twitter:creator" content="@CivicPress">
+  <meta name="twitter:site" content="@CivicPress">
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "CivicPress Manifesto",
+    "description": "The CivicPress Manifesto outlines our vision for open, transparent, and collaborative civic technology that empowers communities and strengthens democracy.",
+    "url": "https://civic-press.org/manifesto",
+    "author": {
+      "@type": "Organization",
+      "name": "CivicPress",
+      "url": "https://github.com/CivicPress"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "CivicPress",
+      "url": "https://github.com/CivicPress"
+    },
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "CivicPress",
+      "url": "https://civic-press.org"
+    }
+  }
+  </script>
+
+  <!-- Style -->
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin-inline: auto;
+      background-color: Canvas;
+      color: CanvasText;
+    }
+    main {
+      display: block;
+    }
+    #manifesto {
+      text-align: left;
+    }
+    #manifesto h1, #manifesto h2, #manifesto h3 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    #manifesto h1 {
+      border-bottom: 2px solid currentColor;
+      padding-bottom: 0.5rem;
+    }
+    #manifesto h2 {
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 0.3rem;
+    }
+    #manifesto p {
+      margin-bottom: 1rem;
+    }
+    #manifesto ul, #manifesto ol {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+    }
+    #manifesto li {
+      margin-bottom: 0.5rem;
+    }
+    #manifesto blockquote {
+      border-left: 4px solid #2563eb;
+      margin: 1rem 0;
+      padding-left: 1rem;
+      font-style: italic;
+    }
+    #manifesto code {
+      background-color: rgba(100, 100, 100, 0.1);
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    }
+    #manifesto pre {
+      background-color: rgba(100, 100, 100, 0.05);
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    #manifesto pre code {
+      background: none;
+      padding: 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(100, 100, 100, 0.2);
+      text-align: center;
+      opacity: 0.7;
+    }
+    footer small {
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="manifesto">Loading latest version...</main>
+
+  <footer>
+    <p><small>Automatically fetched from the <a href="https://github.com/CivicPress/manifesto" target="_blank" rel="noopener noreferrer">CivicPress Manifesto repository</a> on GitHub</small></p>
+    <p><small>Open source content • Available for everyone to read, share, and contribute</small></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+  <script defer>
+    const repoBaseURL = 'https://raw.githubusercontent.com/CivicPress/manifesto/master';
+
+    async function getManifestFile() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const localeParam = urlParams.get('locale');
+      const lang = (localeParam || navigator.language || 'en').toLowerCase();
+
+      const potentialLanguages = [
+        { code: 'fr', file: 'manifesto.fr.md' },
+        { code: 'fr-ca', file: 'manifesto.fr.md' },
+        { code: 'en', file: 'manifesto.md' }
+      ];
+
+      const match = potentialLanguages.find(l => lang.startsWith(l.code));
+      const fallback = 'manifesto.md';
+      return (match && await fileExists(match.file)) ? match.file : fallback;
+    }
+
+    async function fileExists(filename) {
+      try {
+        const res = await fetch(`${repoBaseURL}/${filename}`, { method: 'HEAD' });
+        return res.ok;
+      } catch (err) {
+        console.warn('HEAD check failed:', err);
+        return false;
+      }
+    }
+
+    async function loadManifesto() {
+      const file = await getManifestFile();
+      try {
+        const res = await fetch(`${repoBaseURL}/${file}`);
+        if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
+        const raw = await res.text();
+        document.getElementById('manifesto').innerHTML = marked.parse(raw);
+      } catch (err) {
+        document.getElementById('manifesto').textContent = 'Failed to load the manifesto.';
+        console.error(err);
+      }
+    }
+
+    loadManifesto();
+  </script>
+</body>
+</html>
