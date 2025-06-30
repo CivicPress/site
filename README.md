@@ -4,14 +4,16 @@ This repository hosts the static website for [CivicPress](https://civic-press.or
 
 ### 🧭 What's in this repo
 
-- `index.html` — Auto-fetches and renders the latest CivicPress Manifesto from GitHub
+- `index.html` — Displays the CivicPress Manifesto with SEO-optimized content
+- `current-manifesto.md` — Latest manifesto (auto-updated via GitHub Actions)
+- `.github/workflows/update-manifesto.yml` — Automated manifesto updates
 - `favicon.ico` — Minimal civic-style icon
 - `robots.txt` and `sitemap.xml` — SEO basics
 - `LICENSE` — CC BY-SA 4.0 open license
 
 ### 🔄 Auto-updating content
 
-The site dynamically loads the manifesto from:  
+The site automatically updates the manifesto every 6 hours via GitHub Actions from:  
 [github.com/CivicPress/manifesto](https://github.com/CivicPress/manifesto)
 
 ### 🌐 Live deployment
