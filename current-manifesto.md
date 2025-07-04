@@ -53,7 +53,7 @@ Public-sector digital infrastructure has failed communities around the world. Th
 - **Germany – Toll Collect:** Truck toll software delays cost over €6.5B in lost revenue. [Source](https://www.dw.com/en/germanys-toll-collect-fiasco-costly/a-1416466)
 - **South Africa – e-Tolls:** A toll collection system undermined by public resistance and financial loss. [Source](https://businesstech.co.za/news/government/547384/government-finally-makes-a-decision-on-e-tolls-in-south-africa/)
 
-You can explore the full [Appendix of Civic Tech Failures](appendix-failures.md) for over 30 documented examples from around the world.
+You can explore the full [Appendix of Civic Tech Failures](https://github.com/CivicPress/manifesto/blob/master/appendix-failures.md) for over 30 documented examples from around the world.
 
 ---
 
@@ -271,7 +271,7 @@ And CivicPress is a tool to help it work better — one transparent line at a ti
 ### → Start here: [civic-press.org](https://civic-press.org)
 
 To go further:
-– The [appendix of global civic tech failures](appendix-failures.md)
+– The [appendix of global civic tech failures](https://github.com/CivicPress/manifesto/blob/master/appendix-failures.md)
 – The CivicPress public roadmap
 – And [a path to get involved](https://tally.so/r/wAYBvN)
 
