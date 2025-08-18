@@ -186,7 +186,7 @@
         <li>Drives innovation</li>
       </ul>
       
-      <p>For the latest version of this manifesto, visit <a href="https://github.com/CivicPress/manifesto/blob/master/manifesto.md">the CivicPress Manifesto on GitHub</a>.</p>
+      <p>For the latest version of this manifesto, visit <a href="https://github.com/CivicPress/manifesto/blob/main/manifesto.md">the CivicPress Manifesto on GitHub</a>.</p>
     </div>
     
     <!-- Dynamic content container -->
@@ -213,7 +213,7 @@ We're having trouble loading the latest version of the CivicPress Manifesto. Thi
 
 You can read the latest version directly on GitHub:
 
-👉 **[View CivicPress Manifesto on GitHub](https://github.com/CivicPress/manifesto/blob/master/manifesto.md)**
+👉 **[View CivicPress Manifesto on GitHub](https://github.com/CivicPress/manifesto/blob/main/manifesto.md)**
 
 ## About CivicPress
 
@@ -238,7 +238,7 @@ For more information, visit [github.com/CivicPress](https://github.com/CivicPres
       
       // Fallback to GitHub API if local file doesn't exist
       try {
-        const res = await fetch('https://api.github.com/repos/CivicPress/manifesto/contents/manifesto.md?ref=master', {
+        const res = await fetch('https://api.github.com/repos/CivicPress/manifesto/contents/manifesto.md?ref=main', {
           headers: {
             'Accept': 'application/vnd.github.v3+json',
             'User-Agent': 'CivicPress-Site'
@@ -261,7 +261,7 @@ For more information, visit [github.com/CivicPress](https://github.com/CivicPres
             /\[([^\]]+)\]\(([^)]+)\)/g,
             (match, text, url) => {
               if (!url.startsWith('http')) {
-                const githubUrl = `https://github.com/CivicPress/manifesto/blob/master/${url}`;
+                const githubUrl = `https://github.com/CivicPress/manifesto/blob/main/${url}`;
                 return `[${text}](${githubUrl})`;
               }
               return match;
