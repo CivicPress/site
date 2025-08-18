@@ -1,6 +1,6 @@
 # CivicPress Manifesto
 
-_Manifesto v1.0 – June 2025_
+_Manifesto v1.1 – August 2025_
 
 The CivicPress Manifesto is a declaration of intent. It outlines why this project exists, what it stands for, and how it intends to serve cities, citizens, and the public interest through open civic infrastructure. This document is for local administrators, developers, civic workers, designers, journalists, and all those who believe technology should serve democracy — not the other way around.
 
@@ -44,14 +44,14 @@ If legacy players want to support these principles, even better — they have th
 
 Public-sector digital infrastructure has failed communities around the world. These failures are not isolated — they are systemic. Here are just a few examples:
 
-- **Canada – Phénix (2016–ongoing):** IBM; a $2.4B payroll disaster affecting over 100,000 federal employees. [Source](https://www.cbc.ca/news/politics/phoenix-pay-system-2020-1.5461545)
-- **United States – VA EHR Modernization:** Oracle Cerner; a multibillion-dollar health records project for veterans that remains unusable. [Source](https://www.fedscoop.com/va-ehr-modernization-cost/)
-- **United Kingdom – NHS NPfIT:** £10B spent on an electronic health record system that was cancelled before completion. [Source](https://www.nao.org.uk/wp-content/uploads/2011/05/10121056.pdf)
-- **France – Louvois:** Military payroll system error led to €1B in mispayments. [Source](https://www.france24.com/en/20140204-france-military-pay-system-louvois-failure)
-- **Australia – Robodebt:** An unlawful automated welfare debt program that harmed hundreds of thousands. [Source](https://www.theguardian.com/australia-news/2020/jul/06/robodebt-class-action-settled-government-to-refund-470000-people)
-- **India – Aadhaar Welfare Integration:** Biometric errors in welfare delivery have excluded millions. [Source](https://www.nytimes.com/2018/04/03/technology/india-id-aadhaar.html)
-- **Germany – Toll Collect:** Truck toll software delays cost over €6.5B in lost revenue. [Source](https://www.dw.com/en/germanys-toll-collect-fiasco-costly/a-1416466)
-- **South Africa – e-Tolls:** A toll collection system undermined by public resistance and financial loss. [Source](https://businesstech.co.za/news/government/547384/government-finally-makes-a-decision-on-e-tolls-in-south-africa/)
+- **Canada – Phénix (2016–ongoing):** IBM; a $2.4B payroll disaster affecting over 100,000 federal employees.
+- **United States – VA EHR Modernization:** Oracle Cerner; a multibillion-dollar health records project for veterans that remains unusable.
+- **United Kingdom – NHS NPfIT:** £10B spent on an electronic health record system that was cancelled before completion.
+- **France – Louvois:** Military payroll system error led to €1B in mispayments.
+- **Australia – Robodebt:** An unlawful automated welfare debt program that harmed hundreds of thousands.
+- **India – Aadhaar Welfare Integration:** Biometric errors in welfare delivery have excluded millions.
+- **Germany – Toll Collect:** Truck toll software delays cost over €6.5B in lost revenue.
+- **South Africa – e-Tolls:** A toll collection system undermined by public resistance and financial loss.
 
 You can explore the full [Appendix of Civic Tech Failures](https://github.com/CivicPress/manifesto/blob/master/appendix-failures.md) for over 30 documented examples from around the world.
 
@@ -74,7 +74,8 @@ Most lack in-house developers.
 Most can’t afford consultants.  
 They rely on spreadsheets, PDFs, and brittle systems inherited from another era — or imposed by another level of government.
 
-When something breaks, they’re told:  
+When something breaks, they’re told:
+
 > “Submit a ticket.”  
 > “Wait for version 6.”  
 > “Buy the upgrade.”  
@@ -100,7 +101,7 @@ And it will not be solved by the same firms that profit from the opacity.
 
 ## 3. What We’re Building
 
-CivicPress is not a single product.
+CivicPress is not a single product.  
 It’s a modular, open-source civic platform — like WordPress for local governance, or Odoo for public institutions.
 
 At its core, CivicPress is an **open-source ERP for local governments**.  
@@ -109,17 +110,15 @@ It’s modular, composable, and built to serve communities of any size — from 
 It’s not locked behind licenses. It’s not “software as a service.”  
 _It’s a civic platform — designed to serve communities, not corporations._
 
-CivicPress is a modular, open-source platform designed to help local governments run transparently, accountably, and efficiently — online or offline.
-
 ---
 
 ### 3.1 Modular by Design
 
 Every town has different needs.  
-Some need a meeting archive. Others need permit tracking, budget transparency, or public consultations.  
+Some need a meeting archive. Others need permit tracking, budget transparency, or public consultations.
 
 CivicPress is built as a set of modules — not a monolith.  
-Governments can start small and grow gradually.  
+Governments can start small and grow gradually.
 
 Install what’s needed, ignore what’s not, and shape the system around real civic workflows — not vendor roadmaps.
 
@@ -128,9 +127,10 @@ Install what’s needed, ignore what’s not, and shape the system around real c
 ### 3.2 Built for Resilience
 
 CivicPress is designed to run:
-- In the cloud or on a local server  
-- With or without internet access  
-- In well-funded cities or rural municipalities  
+
+- In the cloud or on a local server
+- With or without internet access
+- In well-funded cities or rural municipalities
 - In stable conditions or emergency response zones
 
 No fragile login systems. No mandatory internet connection.  
@@ -146,10 +146,10 @@ CivicPress stores public records — motions, minutes, decisions, drafts — in 
 
 Why Markdown?
 
-- It’s readable by humans  
-- Editable with any basic text tool  
-- Easy to version, track, and publish  
-- Friendly to both non-technical staff and developers  
+- It’s readable by humans
+- Editable with any basic text tool
+- Easy to version, track, and publish
+- Friendly to both non-technical staff and developers
 - Resistant to obsolescence
 
 Council minutes don’t need to be locked in PDFs.  
@@ -165,9 +165,9 @@ Transparency isn’t a feature — it’s a format.
 CivicPress is designed for both staff and citizens.  
 It doesn’t just help manage civic work — it helps **share it**.
 
-- Meetings can be livestreamed and archived  
-- Minutes are published in real time  
-- Budgets, laws, and plans become linkable, legible, and verifiable  
+- Meetings can be livestreamed and archived
+- Minutes are published in real time
+- Budgets, laws, and plans become linkable, legible, and verifiable
 - Participation becomes possible — not just symbolic
 
 Just as WordPress democratized publishing,  
@@ -178,6 +178,22 @@ And the systems behind it should too.
 
 ---
 
+### 3.5 Ledger as Civic Accountability
+
+The Ledger module connects decisions to financial reality.  
+It links motions, budgets, and payments in a transparent, double-entry system.
+
+This does not replace existing financial software.  
+Instead, it provides a **civic layer of accountability**:
+
+- When a council approves a budget, that motion can be traced to actual spending.
+- When a payment is made, its origin in a public decision is visible.
+
+Ledger turns governance from words on paper into verifiable chains of action.  
+It is optional, modular, and inspectable — but when enabled, it transforms CivicPress from a records system into a full civic ERP backbone.
+
+---
+
 ## 4. Our Core Principles
 
 CivicPress is built on a foundation of values — not just features.  
@@ -185,6 +201,7 @@ These principles guide how we design, develop, and deliver the platform.
 They remind us that civic technology is never truly neutral — because every design shapes access, visibility, and power.
 
 CivicPress is guided by six core principles:
+
 - Transparency
 - Trust
 - Open-source
@@ -196,40 +213,52 @@ CivicPress is shaped by principles that support democracy, not just efficiency.
 
 ---
 
-### Transparency  
+### Transparency
+
 Decisions, records, and changes should be visible by default.  
 Closed systems create closed cultures. CivicPress is designed to expose the workings of government — not obscure them.
 
+Transparency is not only about publishing records.  
+With modules like Ledger, it’s about linking decisions to outcomes — showing how a vote or a motion becomes real-world action.
+
 ---
 
-### Trust  
+### Trust
+
 Trust must be earned — through clarity, accountability, and reliability.  
 CivicPress is built to document what happened, show what’s real, and create systems that citizens can verify — not just believe in.
 
+Trust deepens when citizens can see not only what was decided, but how it was carried out.  
+Ledger makes this link visible.
+
 ---
 
-### Open-source  
+### Open-source
+
 Civic infrastructure should never be locked away.  
 CivicPress is open by design — inspectable, forkable, repairable.  
 No license keys. No black boxes. No surprises.
 
 ---
 
-### Public Good  
+### Public Good
+
 CivicPress exists to serve the public interest.  
 It is not optimized for revenue, ad clicks, or shareholder returns.  
 Its only measure of success is how well it supports the people who rely on it.
 
 ---
 
-### Ease of Use  
+### Ease of Use
+
 If a town clerk can’t use it, it’s not finished.  
 If a citizen can’t find it, it’s not public.  
 CivicPress must be usable without consultants, tutorials, or advanced degrees — because democracy belongs to everyone, not just experts.
 
 ---
 
-### Equity  
+### Equity
+
 Civic tools must work for everyone — regardless of income, geography, or background.  
 CivicPress is designed to reduce barriers, not raise them.  
 Participation should be a right, not a privilege.
@@ -252,10 +281,11 @@ CivicPress is still young.
 But it is growing, and it is open.
 
 You can:
-- Contribute code  
-- Translate the interface  
-- Test modules  
-- Document policies  
+
+- Contribute code
+- Translate the interface
+- Test modules
+- Document policies
 - Help a town set up its first civic record
 
 You don’t need permission — just purpose.
@@ -270,9 +300,9 @@ And CivicPress is a tool to help it work better — one transparent line at a ti
 
 ### → Start here: [civic-press.org](https://civic-press.org)
 
-To go further:
-– The [appendix of global civic tech failures](https://github.com/CivicPress/manifesto/blob/master/appendix-failures.md)
-– The CivicPress public roadmap
+To go further:  
+– The [appendix of global civic tech failures](https://github.com/CivicPress/manifesto/blob/master/appendix-failures.md)  
+– The CivicPress public roadmap  
 – And [a path to get involved](https://tally.so/r/wAYBvN)
 
 Have something to share? Write to us at [hello@civic-press.org](mailto:hello@civic-press.org).  
@@ -281,5 +311,6 @@ We'd love to hear what matters to you — and how we can build it together.
 ---
 
 ### License
+
 This document is open and remixable under the CC BY-SA 4.0 license.  
 Please credit CivicPress if you reuse or adapt it.
