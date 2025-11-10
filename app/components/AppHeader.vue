@@ -22,6 +22,15 @@ const localeOptions = computed(() => locales.value.map(localeEntry => ({
   label: localeEntry.name
 })))
 
+const localeModel = computed({
+  get: () => locale.value,
+  set: (code: string) => {
+    if (code && code !== locale.value) {
+      setLocale(code)
+    }
+  }
+})
+
 nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([
     document.querySelector('#features'),
@@ -49,14 +58,14 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
       />
 
       <USelectMenu
+        v-model="localeModel"
         class="hidden lg:block w-28"
         size="sm"
-        :model-value="locale.value"
-        :options="localeOptions"
-        option-attribute="label"
-        value-attribute="value"
+        :items="localeOptions"
+        value-key="value"
+        label-key="label"
+        :search-input="false"
         :aria-label="t('navigation.languageSwitcherLabel')"
-        @update:model-value="code => setLocale(code)"
       />
 
       <UButton
@@ -81,14 +90,14 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
         block
       />
       <USelectMenu
+        v-model="localeModel"
         class="mt-4"
         size="sm"
-        :model-value="locale.value"
-        :options="localeOptions"
-        option-attribute="label"
-        value-attribute="value"
+        :items="localeOptions"
+        value-key="value"
+        label-key="label"
+        :search-input="false"
         :aria-label="t('navigation.languageSwitcherLabel')"
-        @update:model-value="code => setLocale(code)"
       />
     </template>
   </UHeader>
