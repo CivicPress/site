@@ -18,8 +18,8 @@ const items = computed(() => [{
 }])
 
 const localeOptions = computed(() => locales.value.map(localeEntry => ({
-  value: localeEntry.code,
-  label: localeEntry.name
+  label: localeEntry.name,
+  value: localeEntry.code
 })))
 
 const localeModel = computed({
@@ -62,9 +62,10 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
         class="hidden lg:block w-28"
         size="sm"
         :items="localeOptions"
-        value-key="value"
         label-key="label"
+        value-key="value"
         :search-input="false"
+        :portal="false"
         :aria-label="t('navigation.languageSwitcherLabel')"
       />
 
@@ -94,9 +95,10 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
         class="mt-4"
         size="sm"
         :items="localeOptions"
-        value-key="value"
         label-key="label"
+        value-key="value"
         :search-input="false"
+        :portal="false"
         :aria-label="t('navigation.languageSwitcherLabel')"
       />
     </template>
