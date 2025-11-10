@@ -7,9 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/content',
-    '@nuxtjs/i18n',
-    '@nuxtjs/robots',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/i18n'
   ],
 
   css: ['~/assets/css/main.css'],
@@ -68,20 +66,5 @@ export default defineNuxtConfig({
       { code: 'fr', iso: 'fr-FR', file: 'fr.json', name: 'Français' }
     ],
     vueI18n: './i18n.config.ts'
-  },
-
-  robots: {
-    groups: [
-      {
-        userAgent: '*',
-        allow: '/'
-      }
-    ],
-    sitemap: [`${siteUrl}/sitemap.xml`]
-  },
-
-  sitemap: {
-    xslColumns: ['loc', 'lastmod', 'changefreq', 'priority'],
-    autoI18n: true
   }
 })

@@ -44,21 +44,7 @@ When adding copy, wire components through `useI18n` instead of hard-coding liter
 
 ## Production
 
-Generate the static site:
-
-```bash
-pnpm generate
-```
-
-Artifacts are emitted to `dist/` using the GitHub Pages Nitro preset.  
-Use GitHub Actions to run `pnpm install` → `pnpm generate` and publish `dist/`.  
-Remember to provide a `static/CNAME` pointing to `civicpress.io`; keep `civic-press.org` as a redirect.
-
-Preview a production build locally:
-
-```bash
-pnpm preview
-```
+Static generation (`pnpm generate`) and sitemap automation are temporarily disabled while we revisit SEO tooling. Deployment instructions will return once the sitemap/robots integration is restored.
 
 ## Additional Notes
 
