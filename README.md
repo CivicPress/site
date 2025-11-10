@@ -1,7 +1,7 @@
 # CivicPress Nuxt Site
 
 Static landing site for CivicPress built with Nuxt 4 and Nuxt UI Pro.  
-The project evolves the original HTML manifesto into a localized (English/French) experience with strong SEO and GitHub Pages deployment.
+The project evolves the original HTML manifesto into a localized (English/French) experience with strong SEO and GitHub Pages deployment on `civicpress.io`. The legacy domain `civic-press.org` will redirect to the new site.
 
 ## Requirements
 
@@ -52,7 +52,7 @@ pnpm generate
 
 Artifacts are emitted to `dist/` using the GitHub Pages Nitro preset.  
 Use GitHub Actions to run `pnpm install` → `pnpm generate` and publish `dist/`.  
-Remember to provide a `static/CNAME` once the civicpress.org domain is mapped.
+Remember to provide a `static/CNAME` pointing to `civicpress.io`; keep `civic-press.org` as a redirect.
 
 Preview a production build locally:
 

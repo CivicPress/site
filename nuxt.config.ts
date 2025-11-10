@@ -1,4 +1,4 @@
-const siteUrl = process.env.NUXT_PUBLIC_SITE_URL ?? 'https://civic-press.org'
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL ?? 'https://civicpress.io'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({

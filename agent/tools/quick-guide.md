@@ -11,7 +11,7 @@
 ## Reference Links
 - Nuxt UI Pro Landing template: https://landing-template.nuxt.dev
 - Nuxt Studio overview: https://content.nuxt.com/studio
-- Deployment target: GitHub Pages (CNAME to civicpress domain, static output at `dist/`)
+- Deployment target: GitHub Pages (CNAME to civicpress.io, legacy civic-press.org redirects)
 
 ## When in Doubt
 - Record blockers in `agent/context/blockers.md`.
