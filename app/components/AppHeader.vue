@@ -51,12 +51,12 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
       <USelectMenu
         class="hidden lg:block w-28"
         size="sm"
-        :model-value="locale"
+        :model-value="locale.value"
         :options="localeOptions"
         option-attribute="label"
         value-attribute="value"
         :aria-label="t('navigation.languageSwitcherLabel')"
-        @update:model-value="setLocale"
+        @update:model-value="code => setLocale(code)"
       />
 
       <UButton
@@ -83,12 +83,12 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
       <USelectMenu
         class="mt-4"
         size="sm"
-        :model-value="locale"
+        :model-value="locale.value"
         :options="localeOptions"
         option-attribute="label"
         value-attribute="value"
         :aria-label="t('navigation.languageSwitcherLabel')"
-        @update:model-value="setLocale"
+        @update:model-value="code => setLocale(code)"
       />
     </template>
   </UHeader>
