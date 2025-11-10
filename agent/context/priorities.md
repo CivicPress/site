@@ -1,9 +1,9 @@
 # Current Priorities
 
-1. Plan Nuxt 4 + Nuxt UI landing migration from existing static HTML.
-2. Define localized copy (English/French) and section structure based on the Nuxt UI Pro landing template.
-3. Establish deployment pipeline to GitHub Pages with civicpress domain mapping.
-4. Document SEO/i18n requirements and shareable metadata defaults.
+1. Customize Nuxt UI landing content with CivicPress messaging and visuals.
+2. Finalize i18n flow (content sources + translations) for English/French.
+3. Harden SEO metadata, Open Graph tags, and structured data.
+4. Draft GitHub Pages deployment workflow (Actions + CNAME).
 
 _Last updated: 2025-11-10_
 
