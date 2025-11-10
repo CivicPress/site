@@ -55,7 +55,7 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
     lazy: true,
-    langDir: 'app/locales',
+    langDir: 'locales',
     detectBrowserLanguage: {
       alwaysRedirect: false,
       redirectOn: 'root',
