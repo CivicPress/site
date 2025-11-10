@@ -22,6 +22,8 @@ Start the development server on `http://localhost:3000`:
 pnpm dev
 ```
 
+_Note:_ The maintainer will start/stop the dev server. Nuxt's hot-reload handles code changes automatically—no need to restart.
+
 Type-check, lint, or format on demand:
 
 ```bash
