@@ -1,0 +1,47 @@
+{
+  "navigation": {
+    "features": "Features",
+    "pricing": "Funding",
+    "testimonials": "Testimonials",
+    "primaryCta": "Explore CivicPress",
+    "languageSwitcherLabel": "Change language"
+  },
+  "footer": {
+    "resources": {
+      "title": "Resources",
+      "links": {
+        "helpCenter": "Help center",
+        "docs": "Documentation",
+        "roadmap": "Roadmap",
+        "changelog": "Changelog"
+      }
+    },
+    "features": {
+      "title": "Initiatives",
+      "links": {
+        "affiliates": "Partners",
+        "portal": "Participation portal",
+        "jobs": "Careers",
+        "sponsors": "Supporters"
+      }
+    },
+    "company": {
+      "title": "CivicPress",
+      "links": {
+        "about": "About",
+        "pricing": "Funding",
+        "careers": "Join the team",
+        "blog": "Blog"
+      }
+    },
+    "newsletter": {
+      "title": "Subscribe to updates",
+      "placeholder": "Enter your email",
+      "cta": "Subscribe",
+      "successTitle": "Subscribed!",
+      "successDescription": "You're now subscribed to CivicPress updates."
+    },
+    "copyright": "Built with Nuxt UI • © {year}"
+  }
+}
+
