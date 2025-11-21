@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t, tm } = useI18n()
+const { t } = useI18n()
 
 useSeoMeta({
   title: t('landing.hero.title'),
@@ -7,18 +7,6 @@ useSeoMeta({
   description: t('landing.hero.subhead'),
   ogDescription: t('landing.hero.subhead')
 })
-
-const featureItems = computed(() => tm('landing.features.items') as Array<{
-  title: string
-  body: string
-  why: string
-  tag?: string
-}>)
-
-const values = computed(() => tm('landing.values.items') as Array<{
-  title: string
-  body: string
-}>)
 </script>
 
 <template>
@@ -29,19 +17,20 @@ const values = computed(() => tm('landing.values.items') as Array<{
     <section class="py-24 bg-primary-50 dark:bg-gray-900">
       <UContainer class="text-center max-w-3xl mx-auto">
         <div class="inline-block px-4 py-3 mb-8 bg-white/90 dark:bg-gray-900/80 rounded-xl shadow-sm">
-          <UH1 class="text-4xl font-bold">
+          <h1 class="text-4xl font-bold">
             {{ t('landing.hero.title') }}
-          </UH1>
+          </h1>
         </div>
 
-        <ULead class="text-lg opacity-90 mb-6">
+        <p class="text-lg opacity-90 mb-6">
           {{ t('landing.hero.subhead') }}
-        </ULead>
+        </p>
 
         <div class="flex justify-center gap-3 mt-6">
           <UButton
-            to="/demo"
+            to="https://demo.civicpress.io"
             size="lg"
+            target="_blank"
           >
             {{ t('landing.hero.primaryCta') }}
           </UButton>
@@ -52,7 +41,7 @@ const values = computed(() => tm('landing.values.items') as Array<{
           >
             {{ t('landing.hero.secondaryCta') }}
           </UButton>
-        </div>
+    </div>
 
         <div class="flex justify-center gap-3 mt-8">
           <UBadge
@@ -75,13 +64,13 @@ const values = computed(() => tm('landing.values.items') as Array<{
     ============================ -->
     <section class="py-24">
       <UContainer class="max-w-4xl mx-auto text-center">
-        <UH2 class="text-3xl font-semibold mb-4">
+        <h2 class="text-3xl font-semibold mb-4">
           {{ t('landing.demoPreview.title') }}
-        </UH2>
+        </h2>
 
-        <ULead class="mb-8">
+        <p class="mb-8 text-lg opacity-90">
           {{ t('landing.demoPreview.description') }}
-        </ULead>
+        </p>
 
         <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800">
           <video
@@ -104,9 +93,9 @@ const values = computed(() => tm('landing.values.items') as Array<{
     ============================ -->
     <section class="py-24 bg-gray-50 dark:bg-gray-950">
       <UContainer class="max-w-3xl mx-auto">
-        <UH2 class="text-3xl font-semibold mb-6">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">
           {{ t('landing.problem.lede') }}
-        </UH2>
+        </h2>
 
         <p class="prose dark:prose-invert opacity-95 leading-relaxed text-lg">
           {{ t('landing.problem.body') }}
@@ -121,13 +110,13 @@ const values = computed(() => tm('landing.values.items') as Array<{
     ============================ -->
     <section class="py-24">
       <UContainer class="max-w-4xl mx-auto text-center">
-        <UH2 class="text-3xl font-semibold mb-4">
+        <h2 class="text-3xl font-semibold mb-4">
           {{ t('landing.whyVideo.title') }}
-        </UH2>
+        </h2>
 
-        <ULead class="mb-8">
+        <p class="mb-8 text-lg opacity-90">
           {{ t('landing.whyVideo.description') }}
-        </ULead>
+        </p>
 
         <div class="rounded-xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-800">
           <video
@@ -146,26 +135,91 @@ const values = computed(() => tm('landing.values.items') as Array<{
     <!-- ===========================
          FEATURES
     ============================ -->
-    <section class="py-28 bg-primary-50/30 dark:bg-gray-900">
+    <section
+      id="features"
+      class="py-28 bg-primary-50/30 dark:bg-gray-900"
+    >
       <UContainer>
-        <UH2 class="text-3xl text-center font-semibold mb-14">
+        <h2 class="text-3xl text-center font-semibold mb-14">
           {{ t('landing.features.intro') }}
-        </UH2>
+        </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <UCard
-            v-for="feature in featureItems"
-            :key="feature.title"
-            class="p-6 text-left"
-          >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+          <UCard class="p-6">
             <h3 class="text-xl font-semibold mb-2">
-              {{ feature.title }}
+              {{ t('landing.features.items.0.title') }}
             </h3>
             <p class="opacity-80 mb-2">
-              {{ feature.body }}
+              {{ t('landing.features.items.0.body') }}
             </p>
             <p class="text-xs opacity-75">
-              <span class="font-semibold">Why:</span> {{ feature.why }}
+              <span class="font-semibold">Why:</span>
+              {{ t('landing.features.items.0.why') }}
+            </p>
+          </UCard>
+
+          <UCard class="p-6">
+            <h3 class="text-xl font-semibold mb-2">
+              {{ t('landing.features.items.1.title') }}
+            </h3>
+            <p class="opacity-80 mb-2">
+              {{ t('landing.features.items.1.body') }}
+            </p>
+            <p class="text-xs opacity-75">
+              <span class="font-semibold">Why:</span>
+              {{ t('landing.features.items.1.why') }}
+            </p>
+          </UCard>
+
+          <UCard class="p-6">
+            <h3 class="text-xl font-semibold mb-2">
+              {{ t('landing.features.items.2.title') }}
+            </h3>
+            <p class="opacity-80 mb-2">
+              {{ t('landing.features.items.2.body') }}
+            </p>
+            <p class="text-xs opacity-75">
+              <span class="font-semibold">Why:</span>
+              {{ t('landing.features.items.2.why') }}
+            </p>
+          </UCard>
+
+          <UCard class="p-6">
+            <h3 class="text-xl font-semibold mb-2">
+              {{ t('landing.features.items.3.title') }}
+            </h3>
+            <p class="opacity-80 mb-2">
+              {{ t('landing.features.items.3.body') }}
+            </p>
+            <p class="text-xs opacity-75">
+              <span class="font-semibold">Why:</span>
+              {{ t('landing.features.items.3.why') }}
+            </p>
+          </UCard>
+
+          <UCard class="p-6">
+            <h3 class="text-xl font-semibold mb-2">
+              {{ t('landing.features.items.4.title') }}
+            </h3>
+            <p class="opacity-80 mb-2">
+              {{ t('landing.features.items.4.body') }}
+            </p>
+            <p class="text-xs opacity-75">
+              <span class="font-semibold">Why:</span>
+              {{ t('landing.features.items.4.why') }}
+            </p>
+          </UCard>
+
+          <UCard class="p-6">
+            <h3 class="text-xl font-semibold mb-2">
+              {{ t('landing.features.items.5.title') }}
+            </h3>
+            <p class="opacity-80 mb-2">
+              {{ t('landing.features.items.5.body') }}
+            </p>
+            <p class="text-xs opacity-75">
+              <span class="font-semibold">Why:</span>
+              {{ t('landing.features.items.5.why') }}
             </p>
           </UCard>
         </div>
@@ -175,11 +229,14 @@ const values = computed(() => tm('landing.values.items') as Array<{
     <!-- ===========================
          HOW IT WORKS
     ============================ -->
-    <section class="py-24">
+    <section
+      id="how-it-works"
+      class="py-24"
+    >
       <UContainer class="max-w-3xl mx-auto">
-        <UH2 class="text-3xl font-semibold mb-6">
+        <h2 class="text-3xl font-semibold mb-6">
           {{ t('landing.howItWorks.title') }}
-        </UH2>
+        </h2>
 
         <p class="prose dark:prose-invert opacity-95 leading-relaxed text-lg">
           {{ t('landing.howItWorks.body1') }}
@@ -198,20 +255,57 @@ const values = computed(() => tm('landing.values.items') as Array<{
     ============================ -->
     <section class="py-24 bg-gray-50 dark:bg-gray-950">
       <UContainer>
-        <UH2 class="text-3xl font-semibold mb-10 text-center">
+        <h2 class="text-3xl font-semibold mb-10 text-center">
           {{ t('landing.values.title') }}
-        </UH2>
+        </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-          <div
-            v-for="value in values"
-            :key="value.title"
-          >
+          <div>
             <h3 class="font-semibold mb-2">
-              {{ value.title }}
+              {{ t('landing.values.items.0.title') }}
             </h3>
             <p class="opacity-80">
-              {{ value.body }}
+              {{ t('landing.values.items.0.body') }}
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2">
+              {{ t('landing.values.items.1.title') }}
+            </h3>
+            <p class="opacity-80">
+              {{ t('landing.values.items.1.body') }}
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2">
+              {{ t('landing.values.items.2.title') }}
+            </h3>
+            <p class="opacity-80">
+              {{ t('landing.values.items.2.body') }}
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2">
+              {{ t('landing.values.items.3.title') }}
+            </h3>
+            <p class="opacity-80">
+              {{ t('landing.values.items.3.body') }}
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2">
+              {{ t('landing.values.items.4.title') }}
+            </h3>
+            <p class="opacity-80">
+              {{ t('landing.values.items.4.body') }}
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2">
+              {{ t('landing.values.items.5.title') }}
+            </h3>
+            <p class="opacity-80">
+              {{ t('landing.values.items.5.body') }}
             </p>
           </div>
         </div>
@@ -221,11 +315,14 @@ const values = computed(() => tm('landing.values.items') as Array<{
     <!-- ===========================
          ROADMAP
     ============================ -->
-    <section class="py-24">
+    <section
+      id="roadmap"
+      class="py-24"
+    >
       <UContainer class="max-w-3xl mx-auto">
-        <UH2 class="text-3xl font-semibold mb-6">
+        <h2 class="text-3xl font-semibold mb-6">
           {{ t('landing.roadmap.title') }}
-        </UH2>
+        </h2>
 
         <p class="prose dark:prose-invert opacity-90 leading-relaxed">
           <strong>{{ t('landing.roadmap.currentTitle') }}</strong>
@@ -245,14 +342,113 @@ const values = computed(() => tm('landing.values.items') as Array<{
       </UContainer>
     </section>
 
-    <!-- ===========================
-         CTA
-    ============================ -->
+    <!-- 8. BUILT FOR THE PUBLIC, GOVERNED BY THE PUBLIC -->
+    <section
+      id="governance"
+      class="py-24 bg-gray-50 dark:bg-gray-950"
+    >
+      <UContainer class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-semibold mb-6">
+          {{ t('landing.publicGovernance.title') }}
+        </h2>
+
+        <p class="prose dark:prose-invert opacity-95 leading-relaxed text-lg">
+          {{ t('landing.publicGovernance.body1') }}
+        </p>
+        <p class="prose dark:prose-invert opacity-95 leading-relaxed text-lg mt-4">
+          {{ t('landing.publicGovernance.body2') }}
+        </p>
+        <p class="prose dark:prose-invert opacity-95 leading-relaxed text-lg mt-4">
+          {{ t('landing.publicGovernance.body3') }}
+        </p>
+        <p class="prose dark:prose-invert opacity-95 leading-relaxed text-lg mt-4">
+          {{ t('landing.publicGovernance.body4') }}
+        </p>
+        <p class="prose dark:prose-invert opacity-95 leading-relaxed text-lg mt-4">
+          {{ t('landing.publicGovernance.body5') }}
+        </p>
+        <p class="prose dark:prose-invert opacity-95 leading-relaxed text-lg mt-4">
+          {{ t('landing.publicGovernance.body6') }}
+        </p>
+      </UContainer>
+    </section>
+
+    <!-- 9. FOUNDER / TEAM NOTE -->
+    <section class="py-24">
+      <UContainer class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-semibold mb-6">
+          {{ t('landing.founderNote.title') }}
+        </h2>
+
+        <p class="prose dark:prose-invert opacity-95 leading-relaxed text-lg">
+          {{ t('landing.founderNote.body1') }}
+        </p>
+        <p class="prose dark:prose-invert opacity-95 leading-relaxed text-lg mt-4">
+          {{ t('landing.founderNote.body2') }}
+        </p>
+      </UContainer>
+    </section>
+
+    <!-- 10. FAQ -->
+    <section
+      id="faq"
+      class="py-24 bg-gray-50 dark:bg-gray-950"
+    >
+      <UContainer class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-semibold mb-10 text-center">
+          {{ t('landing.faq.title') }}
+        </h2>
+
+        <div class="space-y-8">
+          <div>
+            <h3 class="font-semibold mb-2">
+              {{ t('landing.faq.items.0.question') }}
+            </h3>
+            <p class="opacity-85">
+              {{ t('landing.faq.items.0.answer') }}
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-semibold mb-2">
+              {{ t('landing.faq.items.1.question') }}
+            </h3>
+            <p class="opacity-85">
+              {{ t('landing.faq.items.1.answer') }}
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-semibold mb-2">
+              {{ t('landing.faq.items.2.question') }}
+            </h3>
+            <p class="opacity-85">
+              {{ t('landing.faq.items.2.answer') }}
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-semibold mb-2">
+              {{ t('landing.faq.items.3.question') }}
+            </h3>
+            <p class="opacity-85">
+              {{ t('landing.faq.items.3.answer') }}
+            </p>
+          </div>
+        </div>
+
+        <p class="mt-10 text-center opacity-80">
+          {{ t('landing.faq.closing') }}
+        </p>
+      </UContainer>
+    </section>
+
+    <!-- 7. CTA -->
     <section class="py-24 bg-primary-600 text-white text-center">
       <UContainer class="max-w-xl mx-auto">
-        <UH2 class="text-3xl font-bold mb-6">
+        <h2 class="text-3xl font-bold mb-6">
           {{ t('landing.cta.title') }}
-        </UH2>
+        </h2>
 
         <p class="opacity-90 mb-8">
           {{ t('landing.cta.contributeSubtitle') }}
@@ -262,7 +458,8 @@ const values = computed(() => tm('landing.values.items') as Array<{
           <UButton
             size="lg"
             color="white"
-            to="/demo"
+            to="https://demo.civicpress.io"
+            target="_blank"
           >
             {{ t('landing.cta.demo') }}
           </UButton>

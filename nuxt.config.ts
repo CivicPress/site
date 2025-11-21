@@ -2,26 +2,14 @@ const siteUrl = process.env.NUXT_PUBLIC_SITE_URL ?? 'https://civicpress.io'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxtjs/i18n'
-  ],
+  // Core modules only (UI + i18n)
+  modules: ['@nuxt/ui', '@nuxtjs/i18n'],
 
+  // Keep SSR enabled for SEO-friendly static generation
+  ssr: true,
+
+  // Global CSS (Nuxt UI + Tailwind entrypoint)
   css: ['~/assets/css/main.css'],
-
-  site: {
-    url: siteUrl,
-    name: 'CivicPress',
-    description: 'Transparent civic technology platform supporting communities.'
-  },
-
-  mdc: {
-    highlight: {
-      noApiRoute: false
-    }
-  },
 
   runtimeConfig: {
     public: {
@@ -31,23 +19,29 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-01-15',
 
-  nitro: {
-    preset: 'github-pages',
-    prerender: {
-      routes: [
-        '/',
-        '/fr'
-      ]
-    }
+  // // Static output for GitHub Pages
+  // nitro: {
+  //   preset: 'github-pages',
+  //   prerender: {
+  //     routes: [
+  //       '/',
+  //       '/fr'
+  //     ]
+  //   }
+  // },
+
+  // Enable Nuxt DevTools
+  devtools: {
+    enabled: false
+  },
+  unhead: {
+    legacy: true
   },
 
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
+  // TypeScript configuration (similar style to your other project)
+  typescript: {
+    strict: true,
+    typeCheck: false
   },
 
   i18n: {
@@ -55,11 +49,7 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     lazy: true,
     langDir: 'locales',
-    detectBrowserLanguage: {
-      alwaysRedirect: false,
-      redirectOn: 'root',
-      cookieKey: 'i18n_redirected'
-    },
+    detectBrowserLanguage: false,
     locales: [
       { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
       { code: 'fr', iso: 'fr-FR', file: 'fr.json', name: 'Français' }

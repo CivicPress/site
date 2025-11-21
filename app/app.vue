@@ -36,6 +36,50 @@ useSeoMeta({
       <NuxtPage />
     </UMain>
 
-    <AppFooter />
+    <footer class="border-t border-gray-800 bg-navy-900 text-xs text-gray-400">
+      <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-x-2 gap-y-1 py-4 text-center">
+        <a
+          href="#"
+          class="hover:text-white transition-colors"
+        >
+          GitHub
+        </a>
+        <span>·</span>
+        <a
+          href="#"
+          class="hover:text-white transition-colors"
+        >
+          Mastodon
+        </a>
+        <span>·</span>
+        <a
+          href="mailto:hello@civicpress.io"
+          class="hover:text-white transition-colors"
+        >
+          Contact (hello@civicpress.io)
+        </a>
+        <span>·</span>
+        <a
+          href="#"
+          class="hover:text-white transition-colors"
+        >
+          License (MIT)
+        </a>
+        <span>·</span>
+        <a
+          href="#"
+          class="hover:text-white transition-colors"
+        >
+          Manifesto
+        </a>
+        <span>·</span>
+        <a
+          href="#"
+          class="hover:text-white transition-colors"
+        >
+          Roadmap
+        </a>
+      </div>
+    </footer>
   </UApp>
 </template>

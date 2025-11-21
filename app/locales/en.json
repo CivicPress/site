@@ -1,8 +1,10 @@
 {
   "navigation": {
     "features": "Features",
-    "pricing": "Funding",
-    "testimonials": "Testimonials",
+    "how": "How it works",
+    "roadmap": "Roadmap",
+    "governance": "Governance",
+    "faq": "FAQ",
     "primaryCta": "Explore CivicPress",
     "languageSwitcherLabel": "Change language"
   },
@@ -139,10 +141,10 @@
       "closing": "This is how CivicPress grows—openly, slowly, and with care. Like any public infrastructure, it earns trust through clarity, reliability, and the people who choose to build it together."
     },
     "cta": {
-      "title": "Ready to explore CivicPress?",
+      "title": "Start building transparency",
       "demo": "Try the demo",
       "contribute": "Join as a contributor",
-      "contributeSubtitle": "Developers, writers, translators, civic staff—all welcome."
+      "contributeSubtitle": "Try the demo or join the contributors helping to build open civic infrastructure."
     },
     "publicGovernance": {
       "title": "Built for the public, governed by the public",
@@ -154,12 +156,12 @@
       "body6": "This is why CivicPress is open by design: transparency isn’t just a feature, it’s a responsibility."
     },
     "founderNote": {
-      "title": "A note from the team",
-      "body1": "CivicPress is being built carefully—the way public infrastructure should be: not rushed to market, but tested, refined, and proven in real contexts. We know earning trust takes time. That’s why every release is documented, every decision explained, and every line of code open to inspection.",
+      "title": "Built carefully, like public infrastructure should be",
+      "body1": "CivicPress is being built carefully — the way public infrastructure should be: not rushed to market, but tested, refined, and proven in real contexts. We know earning trust takes time. That’s why every release is documented, every decision explained, and every line of code open to inspection.",
       "body2": "If your municipality wants to explore a pilot, we’d love to talk. CivicPress is open to collaboration from anyone who believes democracy works best in daylight."
     },
     "faq": {
-      "title": "Frequently asked questions",
+      "title": "FAQ — Common questions",
       "items": [
         {
           "question": "Is CivicPress ready for production use?",
