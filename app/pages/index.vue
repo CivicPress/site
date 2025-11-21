@@ -28,9 +28,11 @@ const values = computed(() => tm('landing.values.items') as Array<{
     ============================ -->
     <section class="py-24 bg-primary-50 dark:bg-gray-900">
       <UContainer class="text-center max-w-3xl mx-auto">
-        <UH1 class="text-4xl font-bold mb-6">
-          {{ t('landing.hero.title') }}
-        </UH1>
+        <div class="inline-block px-4 py-3 mb-8 border border-primary/40 bg-white/90 dark:bg-gray-900/80 rounded-xl shadow-sm">
+          <UH1 class="text-4xl font-bold">
+            {{ t('landing.hero.title') }}
+          </UH1>
+        </div>
 
         <ULead class="text-lg opacity-90 mb-6">
           {{ t('landing.hero.subhead') }}
