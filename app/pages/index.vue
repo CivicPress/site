@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, tm } = useI18n()
 
 useSeoMeta({
   title: t('landing.hero.title'),
@@ -8,19 +8,19 @@ useSeoMeta({
   ogDescription: t('landing.hero.subhead')
 })
 
-const featureItems = computed(() => t('landing.features.items') as Array<{
+const featureItems = computed(() => tm('landing.features.items') as Array<{
   title: string
   body: string
   why: string
   tag?: string
 }>)
 
-const values = computed(() => t('landing.values.items') as Array<{
+const values = computed(() => tm('landing.values.items') as Array<{
   title: string
   body: string
 }>)
 
-const faqItems = computed(() => t('landing.faq.items') as Array<{
+const faqItems = computed(() => tm('landing.faq.items') as Array<{
   question: string
   answer: string
 }>)
