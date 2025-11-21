@@ -1,0 +1,48 @@
+{
+  "navigation": {
+    "features": "Fonctionnalités",
+    "pricing": "Financement",
+    "testimonials": "Témoignages",
+    "primaryCta": "Découvrir CivicPress",
+    "languageSwitcherLabel": "Changer de langue"
+  },
+  "footer": {
+    "resources": {
+      "title": "Ressources",
+      "links": {
+        "helpCenter": "Centre d'aide",
+        "docs": "Documentation",
+        "roadmap": "Feuille de route",
+        "changelog": "Journal des modifications"
+      }
+    },
+    "features": {
+      "title": "Initiatives",
+      "links": {
+        "affiliates": "Partenaires",
+        "portal": "Portail participatif",
+        "jobs": "Recrutement",
+        "sponsors": "Soutiens"
+      }
+    },
+    "company": {
+      "title": "CivicPress",
+      "links": {
+        "about": "À propos",
+        "pricing": "Financement",
+        "careers": "Rejoindre l'équipe",
+        "blog": "Blog"
+      }
+    },
+    "newsletter": {
+      "title": "Recevoir les nouvelles",
+      "placeholder": "Entrez votre courriel",
+      "cta": "S'abonner",
+      "successTitle": "Abonnement confirmé",
+      "successDescription": "Vous recevrez désormais les actualités de CivicPress."
+    },
+    "copyright": "Construit avec Nuxt UI • © {year}"
+  }
+}
+
+
