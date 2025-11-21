@@ -184,7 +184,8 @@
       "github": "GitHub",
       "mastodon": "Mastodon",
       "contact": "Contact",
-      "contactEmail": "hello@civicpress.io",
+      "contactEmailUser": "hello",
+      "contactEmailDomain": "civicpress.io",
       "license": "License (MIT)",
       "manifesto": "Manifesto",
       "roadmap": "Roadmap"
