@@ -1,55 +1,75 @@
-# CivicPress Nuxt Site
+# Nuxt Minimal Starter
 
-Static landing site for CivicPress built with Nuxt 4 and Nuxt UI Pro.  
-The project evolves the original HTML manifesto into a localized (English/French) experience with strong SEO and GitHub Pages deployment on `civicpress.io`. The legacy domain `civic-press.org` will redirect to the new site.
-
-## Requirements
-
-- Node.js 20+
-- pnpm 10 (project-managed via `packageManager` field)
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
 
-Install dependencies:
+Make sure to install dependencies:
 
 ```bash
+# npm
+npm install
+
+# pnpm
 pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
 ```
+
+## Development Server
 
 Start the development server on `http://localhost:3000`:
 
 ```bash
+# npm
+npm run dev
+
+# pnpm
 pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
 ```
-
-_Note:_ The maintainer will start/stop the dev server. Nuxt's hot-reload handles code changes automatically—no need to restart.
-
-Type-check, lint, or format on demand:
-
-```bash
-pnpm typecheck
-pnpm lint
-pnpm lint:fix
-```
-
-## Localization
-
-Nuxt i18n powers a prefix strategy (`/` for English, `/fr` for French).  
-Strings live in `locales/en.json` and `locales/fr.json`.  
-When adding copy, wire components through `useI18n` instead of hard-coding literals.
-
-## Content & Theming
-
-- Page sections are defined under `content/index.yml` (subject to i18n refactor).  
-- Global UI tokens live in `app/app.config.ts`.  
-- Reusable guidance and context for contributors sits under `agent/`.
 
 ## Production
 
-Static generation (`pnpm generate`) and sitemap automation are temporarily disabled while we revisit SEO tooling. Deployment instructions will return once the sitemap/robots integration is restored.
+Build the application for production:
 
-## Additional Notes
+```bash
+# npm
+npm run build
 
-- Update `.cursor/rules.md` and `agent/context/priorities.md` whenever the workflow changes.
-- Record significant choices in `agent/memory/decisions.md`.
-- Keep assets lightweight and honor accessibility best practices outlined in the workspace rules.
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
