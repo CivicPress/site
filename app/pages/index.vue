@@ -1,22 +1,33 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('index', () => queryCollection('content').first())
-if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
-}
+const { t } = useI18n()
 
 useSeoMeta({
-  title: page.value.seo?.title || page.value.title,
-  ogTitle: page.value.seo?.title || page.value.title,
-  description: page.value.seo?.description || page.value.description,
-  ogDescription: page.value.seo?.description || page.value.description
+  title: t('landing.hero.title'),
+  ogTitle: t('landing.hero.title'),
+  description: t('landing.hero.subhead'),
+  ogDescription: t('landing.hero.subhead')
 })
+
+const featureItems = computed(() => t('landing.features.items') as Array<{
+  title: string
+  body: string
+  why: string
+  tag?: string
+}>)
+
+const values = computed(() => t('landing.values.items') as Array<{
+  title: string
+  body: string
+}>)
+
+const faqItems = computed(() => t('landing.faq.items') as Array<{
+  question: string
+  answer: string
+}>)
 </script>
 
 <template>
-  <div
-    v-if="page"
-    class="relative"
-  >
+  <div class="relative">
     <div class="hidden lg:block">
       <UColorModeImage
         light="/images/light/line-1.svg"
@@ -26,8 +37,18 @@ useSeoMeta({
     </div>
 
     <UPageHero
-      :description="page.description"
-      :links="page.hero.links"
+      :description="t('landing.hero.subhead')"
+      :links="[
+        {
+          label: t('landing.hero.primaryCta'),
+          color: 'primary',
+          trailing: true
+        },
+        {
+          label: t('landing.hero.secondaryCta'),
+          variant: 'outline'
+        }
+      ]"
       :ui="{
         container: 'md:pt-18 lg:pt-20',
         title: 'max-w-3xl mx-auto'
@@ -38,16 +59,46 @@ useSeoMeta({
       </template>
 
       <template #title>
-        <MDC
-          :value="page.title"
-          unwrap="p"
-        />
+        <h1 class="text-balance text-4xl sm:text-5xl font-semibold tracking-tight">
+          {{ t('landing.hero.title') }}
+        </h1>
+      </template>
+
+      <template #links>
+        <div class="flex flex-wrap items-center gap-3 justify-center">
+          <UButton
+            color="primary"
+            size="lg"
+            :label="t('landing.hero.primaryCta')"
+          />
+          <UButton
+            color="neutral"
+            variant="outline"
+            size="lg"
+            :label="t('landing.hero.secondaryCta')"
+          />
+        </div>
+
+        <p class="mt-4 text-sm text-muted text-center">
+          {{ t('landing.hero.reassurance') }}
+        </p>
+
+        <div class="mt-6 flex flex-wrap justify-center gap-2 text-xs font-medium text-muted">
+          <UBadge
+            v-for="badge in t('landing.hero.badges') as string[]"
+            :key="badge"
+            color="neutral"
+            variant="subtle"
+          >
+            {{ badge }}
+          </UBadge>
+        </div>
       </template>
     </UPageHero>
 
     <UPageSection
-      :description="page.section.description"
-      :features="page.section.features"
+      :title="t('landing.demoPreview.title')"
+      :description="t('landing.demoPreview.description')"
       orientation="horizontal"
       :ui="{
         container: 'lg:px-0 2xl:px-20 mx-0 max-w-none md:mr-10',
@@ -55,20 +106,14 @@ useSeoMeta({
       }"
       reverse
     >
-      <template #title>
-        <MDC
-          :value="page.section.title"
-          class="sm:*:leading-11"
-        />
-      </template>
       <img
-        :src="page.section.images.desktop"
-        :alt="page.section.title"
+        src="/images/macbook.svg"
+        :alt="t('landing.demoPreview.videoAlt')"
         class="hidden lg:block 2xl:hidden left-0 w-full max-w-2xl"
       >
       <img
-        :src="page.section.images.mobile"
-        :alt="page.section.title"
+        src="/images/macbook-mobile.svg"
+        :alt="t('landing.demoPreview.videoAlt')"
         class="block lg:hidden 2xl:block 2xl:w-full 2xl:max-w-2xl"
       >
     </UPageSection>
@@ -76,9 +121,31 @@ useSeoMeta({
     <USeparator :ui="{ border: 'border-primary/30' }" />
 
     <UPageSection
+      id="why"
+      :title="t('landing.problem.lede')"
+      :description="t('landing.problem.body')"
+      :ui="{ title: 'text-left', description: 'text-left max-w-3xl' }"
+    >
+      <p class="mt-4 text-sm text-muted max-w-3xl">
+        {{ t('landing.problem.body2') }}
+      </p>
+    </UPageSection>
+
+    <UPageSection
+      :title="t('landing.whyVideo.title')"
+      :description="t('landing.whyVideo.description')"
+      :ui="{ title: 'text-left', description: 'text-left max-w-3xl' }"
+    >
+      <div class="mt-6 aspect-video w-full max-w-3xl rounded-xl border border-dashed border-default bg-accented/10 flex items-center justify-center text-muted text-sm">
+        TODO: Embed “Why CivicPress exists” video
+      </div>
+    </UPageSection>
+
+    <USeparator :ui="{ border: 'border-primary/30' }" />
+
+    <UPageSection
       id="features"
-      :description="page.features.description"
-      :features="page.features.features"
+      :title="t('landing.features.intro')"
       :ui="{
         title: 'text-left @container relative flex',
         description: 'text-left'
@@ -87,109 +154,91 @@ useSeoMeta({
     >
       <div class="absolute rounded-full -left-10 top-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
       <div class="absolute rounded-full -right-10 -bottom-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
-      <template #title>
-        <MDC
-          :value="page.features.title"
-          class="*:leading-9"
-        />
-        <div class="hidden @min-[1020px]:block">
-          <UColorModeImage
-            light="/images/light/line-2.svg"
-            dark="/images/dark/line-2.svg"
-            class="absolute top-0 right-0 size-full transform scale-95 translate-x-[70%]"
-          />
-        </div>
+      <template #features>
+        <UPageColumns class="lg:columns-2">
+          <UPageCard
+            v-for="feature in featureItems"
+            :key="feature.title"
+            :title="feature.title"
+          >
+            <p class="text-sm text-muted mb-2">
+              {{ feature.body }}
+            </p>
+            <p class="text-xs text-muted">
+              <span class="font-semibold">Why:</span> {{ feature.why }}
+            </p>
+          </UPageCard>
+        </UPageColumns>
       </template>
     </UPageSection>
 
     <USeparator :ui="{ border: 'border-primary/30' }" />
 
     <UPageSection
-      id="steps"
-      :description="page.steps.description"
-      class="relative overflow-hidden"
+      id="how"
+      :title="t('landing.howItWorks.title')"
+      :ui="{ title: 'text-left', description: 'text-left max-w-3xl' }"
     >
-      <template #headline>
-        <UColorModeImage
-          light="/images/light/line-3.svg"
-          dark="/images/dark/line-3.svg"
-          class="absolute -top-10 sm:top-0 right-1/2 h-24"
-        />
-      </template>
-      <template #title>
-        <MDC :value="page.steps.title" />
-      </template>
+      <div class="space-y-4 text-sm text-muted max-w-3xl">
+        <p>{{ t('landing.howItWorks.body1') }}</p>
+        <p>{{ t('landing.howItWorks.body2') }}</p>
+        <p>{{ t('landing.howItWorks.body3') }}</p>
+        <p>{{ t('landing.howItWorks.body4') }}</p>
+        <p class="text-xs italic">
+          {{ t('landing.howItWorks.example') }}
+        </p>
+      </div>
+    </UPageSection>
 
-      <template #features>
+    <UPageSection
+      id="values"
+      :title="t('landing.values.title')"
+      :ui="{ title: 'text-left', description: 'text-left' }"
+    >
+      <UPageColumns class="lg:columns-3">
         <UPageCard
-          v-for="(step, index) in page.steps.items"
-          :key="index"
-          class="group"
-          :ui="{ container: 'p-4 sm:p-4', title: 'flex items-center gap-1' }"
+          v-for="value in values"
+          :key="value.title"
+          :title="value.title"
         >
-          <UColorModeImage
-            v-if="step.image"
-            :light="step.image?.light"
-            :dark="step.image?.dark"
-            :alt="step.title"
-            class="size-full"
-          />
-
-          <div class="flex flex-col gap-2">
-            <span class="text-lg font-semibold">
-              {{ step.title }}
-            </span>
-            <span class="text-sm text-muted">
-              {{ step.description }}
-            </span>
-          </div>
+          <p class="text-sm text-muted">
+            {{ value.body }}
+          </p>
         </UPageCard>
-      </template>
+      </UPageColumns>
     </UPageSection>
 
     <UPageSection
-      id="pricing"
-      class="mb-32 overflow-hidden"
-      :title="page.pricing.title"
-      :description="page.pricing.description"
-      :plans="page.pricing.plans"
-      :ui="{ title: 'text-left @container relative', description: 'text-left' }"
+      id="roadmap"
+      :title="t('landing.roadmap.title')"
+      :ui="{ title: 'text-left', description: 'text-left max-w-3xl' }"
     >
-      <template #title>
-        <MDC :value="page.pricing.title" />
-
-        <div class="hidden @min-[1120px]:block">
-          <UColorModeImage
-            light="/images/light/line-4.svg"
-            dark="/images/dark/line-4.svg"
-            class="absolute top-0 right-0 size-full transform translate-x-[60%]"
-          />
+      <div class="space-y-4 text-sm text-muted max-w-3xl">
+        <div>
+          <h3 class="font-semibold">
+            {{ t('landing.roadmap.currentTitle') }}
+          </h3>
+          <p>{{ t('landing.roadmap.currentBody') }}</p>
         </div>
-      </template>
-
-      <UPricingPlans scale>
-        <UPricingPlan
-          v-for="(plan, index) in page.pricing.plans"
-          :key="index"
-          :title="plan.title"
-          :description="plan.description"
-          :price="plan.price"
-          :billing-period="plan.billing_period"
-          :billing-cycle="plan.billing_cycle"
-          :highlight="plan.highlight"
-          :scale="plan.highlight"
-          variant="soft"
-          :features="plan.features"
-          :button="plan.button"
-        />
-      </UPricingPlans>
+        <div>
+          <h3 class="font-semibold">
+            {{ t('landing.roadmap.foundationTitle') }}
+          </h3>
+          <p>{{ t('landing.roadmap.foundationBody') }}</p>
+          <p class="mt-2">
+            {{ t('landing.roadmap.pilotsBody') }}
+          </p>
+        </div>
+        <p class="text-xs italic">
+          {{ t('landing.roadmap.closing') }}
+        </p>
+      </div>
     </UPageSection>
 
     <UPageSection
-      id="testimonials"
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-      :items="page.testimonials.items"
+      id="public-governance"
+      :title="t('landing.publicGovernance.title')"
+      :ui="{ title: 'text-left', description: 'text-left max-w-3xl' }"
     >
       <template #headline>
         <UColorModeImage
@@ -199,38 +248,70 @@ useSeoMeta({
         />
       </template>
       <template #title>
-        <MDC :value="page.testimonials.title" />
+        <p class="text-sm text-muted max-w-3xl">
+          {{ t('landing.publicGovernance.body1') }}
+        </p>
       </template>
 
       <UContainer>
-        <UPageColumns class="xl:columns-3">
-          <UPageCard
-            v-for="(testimonial, index) in page.testimonials.items"
-            :key="index"
-            variant="subtle"
-            :description="testimonial.quote"
-            :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
-          >
-            <template #footer>
-              <UUser
-                v-bind="testimonial.user"
-                size="xl"
-              />
-            </template>
-          </UPageCard>
-        </UPageColumns>
+        <div class="space-y-4 text-sm text-muted max-w-3xl">
+          <p>{{ t('landing.publicGovernance.body2') }}</p>
+          <p>{{ t('landing.publicGovernance.body3') }}</p>
+          <p>{{ t('landing.publicGovernance.body4') }}</p>
+          <p>{{ t('landing.publicGovernance.body5') }}</p>
+          <p>{{ t('landing.publicGovernance.body6') }}</p>
+        </div>
       </UContainer>
     </UPageSection>
 
     <USeparator />
 
+    <UPageSection
+      id="founder-note"
+      :title="t('landing.founderNote.title')"
+      :ui="{ title: 'text-left', description: 'text-left max-w-3xl' }"
+    >
+      <div class="space-y-4 text-sm text-muted max-w-3xl">
+        <p>{{ t('landing.founderNote.body1') }}</p>
+        <p>{{ t('landing.founderNote.body2') }}</p>
+      </div>
+    </UPageSection>
+
+    <UPageSection
+      id="faq"
+      :title="t('landing.faq.title')"
+      :ui="{ title: 'text-left', description: 'text-left max-w-3xl' }"
+    >
+      <UAccordion
+        color="primary"
+        variant="subtle"
+        :items="faqItems.map((item) => ({
+          label: item.question,
+          content: item.answer
+        }))"
+        class="max-w-3xl"
+      />
+
+      <p class="mt-4 text-xs text-muted">
+        {{ t('landing.faq.closing') }}
+      </p>
+    </UPageSection>
+
+    <USeparator />
+
     <UPageCTA
-      v-bind="page.cta"
+      :title="t('landing.cta.title')"
+      :links="[
+        { label: t('landing.cta.demo'), color: 'primary', trailingIcon: 'i-lucide-arrow-right' },
+        { label: t('landing.cta.contribute'), variant: 'subtle' }
+      ]"
       variant="naked"
       class="overflow-hidden @container"
     >
       <template #title>
-        <MDC :value="page.cta.title" />
+        <h2 class="text-2xl sm:text-3xl font-semibold">
+          {{ t('landing.cta.title') }}
+        </h2>
 
         <div class="@max-[1280px]:hidden">
           <UColorModeImage
