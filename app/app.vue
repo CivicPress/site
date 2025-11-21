@@ -9,7 +9,12 @@ useHead({
     { key: 'theme-color', name: 'theme-color', content: color }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' },
+    { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/android-chrome-192x192.png' },
+    { rel: 'icon', type: 'image/png', sizes: '512x512', href: '/android-chrome-512x512.png' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+    { rel: 'manifest', href: '/manifest.webmanifest' },
+    { rel: 'shortcut icon', href: '/favicon.ico' }
   ],
   htmlAttrs: {
     lang: 'en'
