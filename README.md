@@ -1,75 +1,110 @@
-# Nuxt Minimal Starter
+# CivicPress Website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+The official marketing website for [CivicPress](https://civicpress.io) - open infrastructure for transparent local government.
 
-## Setup
+## Tech Stack
 
-Make sure to install dependencies:
+- **Framework:** Nuxt 4 with Nuxt UI Pro
+- **Language:** Vue 3 + TypeScript
+- **Styling:** Tailwind CSS via Nuxt UI
+- **i18n:** Nuxt i18n module (English & French)
+- **Package Manager:** pnpm
+
+## Features
+
+- 🌍 **Bilingual Support:** English (default) and French with locale routing
+- 🎨 **Modern UI:** Built with Nuxt UI Pro components
+- 📱 **Responsive Design:** Mobile-first approach with desktop refinements
+- 🔍 **SEO Optimized:** Comprehensive meta tags, Open Graph, and Twitter Cards
+- 🌙 **Dark Mode:** Full dark mode support
+- ♿ **Accessible:** Semantic HTML and ARIA labels
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- pnpm 10+
+
+### Installation
 
 ```bash
-# npm
-npm install
-
-# pnpm
+# Install dependencies
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### Development
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
+# Start development server
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+The site will be available at `http://localhost:3000`
 
-Build the application for production:
+- English: `http://localhost:3000`
+- French: `http://localhost:3000/fr`
+
+### Building for Production
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+# Generate static site
+pnpm generate
 ```
 
-Locally preview production build:
+The output will be in the `.output/public` directory, ready for deployment to GitHub Pages.
 
-```bash
-# npm
-npm run preview
+## Project Structure
 
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+```
+├── app/
+│   ├── assets/          # CSS and static assets
+│   ├── components/      # Vue components
+│   └── pages/           # Route pages
+├── i18n/
+│   └── locales/         # Translation files (en.json, fr.json)
+├── public/              # Static files (favicons, images, etc.)
+├── locales -> i18n/locales/  # Symlink for i18n module
+└── nuxt.config.ts       # Nuxt configuration
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Internationalization
+
+The site supports English (default) and French. Translation files are located in `i18n/locales/`:
+
+- `en.json` - English translations
+- `fr.json` - French translations
+
+The i18n module uses the `prefix_except_default` strategy:
+- English: `/` (no prefix)
+- French: `/fr` (with prefix)
+
+## Deployment
+
+The site is configured for static generation and deployment to GitHub Pages:
+
+1. Build the site: `pnpm generate`
+2. Deploy the `.output/public` directory to GitHub Pages
+3. Domain is configured to point to `civicpress.io`
+
+## SEO & Social Sharing
+
+The site includes comprehensive SEO metadata:
+
+- Standard meta tags (title, description, keywords, robots)
+- Open Graph tags for social sharing
+- Twitter Card tags
+- Dynamic canonical URLs
+- Language alternates for i18n
+
+## Analytics
+
+Privacy-friendly analytics via Plausible is integrated.
+
+## License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+See the [CivicPress main repository](https://github.com/CivicPress/civicpress) for contribution guidelines.
