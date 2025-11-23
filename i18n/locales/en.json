@@ -45,15 +45,26 @@
     },
     "copyright": "Built with Nuxt UI • © {year}"
   },
+  "footerLinks": {
+    "github": "GitHub",
+    "mastodon": "Mastodon",
+    "contributor": "Join as a Contributor",
+    "contact": "Contact",
+    "contactEmailUser": "hello",
+    "contactEmailDomain": "civicpress.io",
+    "license": "MIT License",
+    "manifesto": "Manifesto",
+    "roadmap": "Roadmap"
+  },
   "landing": {
     "hero": {
       "title": "Open infrastructure for transparent local government.",
       "subhead": "CivicPress is an open-source, free platform that helps municipalities publish records, meetings, and maps in formats people can read, verify, and trust.",
       "badges": [
-        "Free",
-        "Multilingual",
         "Open-source",
-        "Local-first"
+        "Multilingual",
+        "Auditable records",
+        "Public-first infrastructure"
       ],
       "primaryCta": "Try the demo",
       "secondaryCta": "Join as a contributor",
@@ -63,30 +74,33 @@
     },
     "demoPreview": {
       "title": "See CivicPress in action",
-      "description": "A quick walkthrough of the CivicPress demo — how records, meetings, and maps come together in one transparent system.",
+      "description": "A quick walkthrough of the CivicPress demo, how records, meetings, and maps come together in one transparent system.",
       "videoAlt": "CivicPress demo preview"
     },
     "problem": {
       "lede": "Citizens deserve systems they can see, trust, and afford.",
-      "body": "Most public systems still lock public information behind PDFs, portals, or proprietary software. The result is the same everywhere: citizens can’t see what’s happening, civic staff struggle to maintain broken tools, and trust keeps eroding. Every hidden document or delayed update makes the work of government feel distant, fragile—and expensive.",
+      "body": "Most public systems still lock public information behind PDFs, portals, or proprietary software. The result is the same everywhere: citizens can't see what's happening, civic staff struggle to maintain broken tools, and trust keeps eroding. Every hidden document or delayed update makes the work of government feel distant, fragile, and expensive.",
       "body2": "CivicPress takes the opposite path: open formats, clear links, and records you can audit or improve. By making data inspectable and durable, it restores a foundation of trust between citizens and institutions. A non-profit structure is being developed to preserve public ownership and ensure CivicPress remains truly public infrastructure. It’s not just software; it’s public infrastructure built to last."
     },
     "whyVideo": {
       "title": "Why CivicPress exists",
-      "description": "A short 3-minute video on the story behind CivicPress — why transparency matters, how governments lost control of their tools, and how open-source civic tech can restore trust."
+      "body1": "Modern municipalities rely on digital systems to function — yet most of those systems were never designed for public life. They are expensive, closed, and built around commercial priorities instead of civic ones. Small towns are often left behind, and larger cities become dependent on tools they cannot audit, cannot repair, and cannot trust.",
+      "body2": "CivicPress exists to change this pattern.",
+      "body3": "It starts from a simple idea: public information should live in public formats, under public control. When the tools that manage records, meetings, and civic processes are open, portable, and understandable, governments become more resilient. Staff gain clarity. Citizens gain trust. And the work of democracy becomes a little more visible — and a lot more durable.",
+      "body4": "CivicPress is built to serve that purpose: a shared, open, community-governed infrastructure that any municipality can rely on, no matter its size or budget, and that everyone can inspect, improve, or help build."
     },
     "features": {
-      "intro": "These features are practical expressions of CivicPress values—transparency, trust, and openness made visible in everyday use.",
+      "intro": "These features are practical expressions of CivicPress values, transparency, trust, and openness made visible in everyday use.",
       "items": [
         {
           "title": "Every record, readable.",
           "body": "Store civic records in human-readable Markdown with structured YAML. Version with Git, publish with confidence.",
-          "why": "Each change is traceable and preserved, ensuring transparency and long-term accountability. No proprietary software is needed—anyone can open, read, or review a CivicPress record with a simple text editor."
+          "why": "Each change is traceable and preserved, ensuring transparency and long-term accountability. No proprietary software is needed, anyone can open, read, or review a CivicPress record with a simple text editor."
         },
         {
           "title": "Every meeting, visible.",
           "tag": "public-sessions",
-          "body": "From agendas to minutes and recordings—keep council sessions in one place, linkable and archivable.",
+          "body": "From agendas to minutes and recordings, keep council sessions in one place, linkable and archivable.",
           "why": "When every meeting is accessible, decisions gain context and citizens regain confidence in their institutions."
         },
         {
@@ -102,8 +116,8 @@
         },
         {
           "title": "Complete records, not just text.",
-          "body": "Link large media—video, images, or audio—whether stored locally or in AWS/Azure. Keep Git lean while records stay complete.",
-          "why": "Civic decisions deserve their full context. Meeting videos, reports, and visuals tell the whole story, helping citizens and staff understand not just what changed—but why."
+          "body": "Link large media (video, images, or audio) whether stored locally or in AWS/Azure. Keep Git lean while records stay complete.",
+          "why": "Civic decisions deserve their full context. Meeting videos, reports, and visuals tell the whole story, helping citizens and staff understand not just what changed, but why."
         },
         {
           "title": "Resilient by design.",
@@ -114,11 +128,11 @@
     },
     "howItWorks": {
       "title": "How CivicPress works",
-      "body1": "CivicPress works like a civic foundation built from simple, open materials. Each record—whether a bylaw, a meeting, or a map—is stored in plain text formats that can be opened by anyone, anywhere. There’s no need for special software or licenses, just honesty in the way information is kept.",
+      "body1": "CivicPress works like a civic foundation built from simple, open materials. Each record (whether a bylaw, a meeting, or a map) is stored in plain text formats that can be opened by anyone, anywhere. There's no need for special software or licenses, just honesty in the way information is kept.",
       "body2": "Behind the scenes, Markdown and YAML structure each record so they can be versioned with Git. Every change is logged, every contributor is visible, and nothing is lost in translation between departments or years.",
       "body3": "Maps and media give life to the data: you can link files, connect documents, or reference the places they describe. Whether hosted in the cloud or on a town’s local server, CivicPress keeps information consistent and durable.",
-      "body4": "By replacing costly licenses with open standards, CivicPress helps public institutions save money while keeping control of their own data. The goal isn’t just efficiency—it’s trust. By making civic work inspectable, portable, and future-proof, CivicPress turns technology into a public asset instead of an ongoing expense.",
-      "example": "When a town council votes on a new zoning bylaw, that decision becomes a Markdown record with a unique ID. The vote is linked to the bylaw text, which references the map showing affected areas—all versioned in Git. A year later, anyone can trace exactly when and why that rule changed."
+      "body4": "By replacing costly licenses with open standards, CivicPress helps public institutions save money while keeping control of their own data. The goal isn't just efficiency, it's trust. By making civic work inspectable, portable, and future-proof, CivicPress turns technology into a public asset instead of an ongoing expense.",
+      "example": "When a town council votes on a new zoning bylaw, that decision becomes a Markdown record with a unique ID. The vote is linked to the bylaw text, which references the map showing affected areas, all versioned in Git. A year later, anyone can trace exactly when and why that rule changed."
     },
     "values": {
       "title": "Values that shape CivicPress",
@@ -133,12 +147,14 @@
     },
     "roadmap": {
       "title": "Roadmap & next steps",
+      "currentMilestoneLabel": "Current milestone",
+      "nextStepsLabel": "Next steps",
       "currentTitle": "Current Milestone – v0.1.1",
-      "currentBody": "CivicPress v0.1.1 marks the first stable foundation of the platform—enough to publish, link, and visualize civic records openly. It demonstrates that public infrastructure can be built transparently, with modern tools and civic intent. The release focuses on core functionality, Markdown-based records, and the first working demo for municipal use.",
+      "currentBody": "CivicPress v0.1.1 marks the first stable foundation of the platform, enough to publish, link, and visualize civic records openly. It demonstrates that public infrastructure can be built transparently, with modern tools and civic intent. The release focuses on core functionality, Markdown-based records, and the first working demo for municipal use.",
       "foundationTitle": "Toward a Public Foundation",
-      "foundationBody": "The next phase isn’t just technical—it’s organizational. We’re preparing a non-profit foundation or cooperative to steward CivicPress in the public interest — formalizing governance, defining contributor rights, and preserving public ownership of the platform. This structure will ensure long-term governance that reflects CivicPress’s core values: transparency, openness, and trust.",
-      "pilotsBody": "In parallel, we’re exploring pilot projects with municipalities interested in testing CivicPress in real contexts. Early conversations are underway with municipalities in Québec exploring pilot implementations. These collaborations will guide priorities, accessibility improvements, and policy integration.",
-      "closing": "This is how CivicPress grows—openly, slowly, and with care. Like any public infrastructure, it earns trust through clarity, reliability, and the people who choose to build it together."
+      "foundationBody": "The next phase isn't just technical, it's organizational. We're preparing a non-profit foundation or cooperative to steward CivicPress in the public interest (formalizing governance, defining contributor rights, and preserving public ownership of the platform). This structure will ensure long-term governance that reflects CivicPress's core values: transparency, openness, and trust.",
+      "pilotsBody": "In parallel, we're exploring pilot projects with municipalities interested in testing CivicPress in real contexts. Early conversations are underway with municipalities in Québec exploring pilot implementations. These collaborations will guide priorities, accessibility improvements, and policy integration.",
+      "closing": "This is how CivicPress grows, openly, slowly, and with care. Like any public infrastructure, it earns trust through clarity, reliability, and the people who choose to build it together."
     },
     "cta": {
       "title": "Start building transparency",
@@ -150,18 +166,18 @@
       "title": "Built for the public, governed by the public",
       "body1": "Built by and for citizens, CivicPress emphasizes collective stewardship and long-term public benefit.",
       "body2": "We’ve all seen what happens when civic systems are handed to closed, expensive vendors: budgets rise, trust falls, and citizens lose control of their own information. Civic software built for profit tends to overpromise, underdeliver, and leave municipalities dependent on outside contracts.",
-      "body3": "CivicPress exists to reverse that pattern. It’s open-source, inspectable, and built for the public good. Every line of code, every record format, every improvement is meant to be shared—not sold.",
+      "body3": "CivicPress exists to reverse that pattern. It's open-source, inspectable, and built for the public good. Every line of code, every record format, every improvement is meant to be shared, not sold.",
       "body4": "When systems are open, communities can learn from each other, improve what exists, and trust that the tools they rely on truly belong to them.",
-      "body5": "That’s why CivicPress will be governed by a non-profit foundation — to keep its mission clear, its code open, and its accountability public.",
+      "body5": "That's why CivicPress will be governed by a non-profit foundation (to keep its mission clear, its code open, and its accountability public).",
       "body6": "This is why CivicPress is open by design: transparency isn’t just a feature, it’s a responsibility."
     },
     "founderNote": {
       "title": "Built carefully, like public infrastructure should be",
-      "body1": "CivicPress is being built carefully — the way public infrastructure should be: not rushed to market, but tested, refined, and proven in real contexts. We know earning trust takes time. That’s why every release is documented, every decision explained, and every line of code open to inspection.",
+      "body1": "CivicPress is being built carefully (the way public infrastructure should be): not rushed to market, but tested, refined, and proven in real contexts. We know earning trust takes time. That's why every release is documented, every decision explained, and every line of code open to inspection.",
       "body2": "If your municipality wants to explore a pilot, we’d love to talk. CivicPress is open to collaboration from anyone who believes democracy works best in daylight."
     },
     "faq": {
-      "title": "FAQ — Common questions",
+      "title": "FAQ (Common questions)",
       "items": [
         {
           "question": "Is CivicPress ready for production use?",
@@ -177,22 +193,11 @@
         },
         {
           "question": "What about security and privacy?",
-          "answer": "CivicPress is designed with security in mind: you control where your data lives, who has access, and how it’s backed up. Transparency doesn’t mean exposure — it means confidence through clarity."
+          "answer": "CivicPress is designed with security in mind: you control where your data lives, who has access, and how it's backed up. Transparency doesn't mean exposure, it means confidence through clarity."
         }
       ],
-      "closing": "CivicPress grows in the open—one record, one town, one act of trust at a time."
-    },
-    "footerLinks": {
-      "github": "GitHub",
-      "mastodon": "Mastodon",
-      "contact": "Contact",
-      "contactEmailUser": "hello",
-      "contactEmailDomain": "civicpress.io",
-      "license": "License (MIT)",
-      "manifesto": "Manifesto",
-      "roadmap": "Roadmap"
+      "closing": "CivicPress grows in the open, one record, one town, one act of trust at a time."
     }
   }
 }
-
 
