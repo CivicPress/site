@@ -121,9 +121,7 @@ watch(locale, (newLocale) => {
             </a>
             <span class="text-gray-300 dark:text-slate-600 hidden sm:inline">·</span>
             <a
-              href="https://tally.so/r/wAYBvN"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:hello@civicpress.io"
               class="text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors py-1.5"
             >
               {{ t('footerLinks.contributor') }}

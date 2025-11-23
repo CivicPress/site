@@ -330,7 +330,7 @@ useSeoMeta({
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 max-w-5xl mx-auto text-left">
-          <UCard class="w-full rounded-2xl border border-[#D3DEEE] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] bg-white dark:bg-slate-900/50 px-4 py-3 md:p-7">
+          <UCard class="w-full rounded-2xl border border-[#D3DEEE] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] bg-white dark:bg-slate-900/50 px-4 py-3 md:p-4">
             <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
               {{ t('landing.features.items.0.title') }}
             </h3>
@@ -344,7 +344,7 @@ useSeoMeta({
             </div>
           </UCard>
 
-          <UCard class="w-full rounded-2xl border border-[#D3DEEE] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] bg-white dark:bg-slate-900/50 px-4 py-3 md:p-7">
+          <UCard class="w-full rounded-2xl border border-[#D3DEEE] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] bg-white dark:bg-slate-900/50 px-4 py-3 md:p-4">
             <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
               {{ t('landing.features.items.1.title') }}
             </h3>
@@ -358,7 +358,7 @@ useSeoMeta({
             </div>
           </UCard>
 
-          <UCard class="w-full rounded-2xl border border-[#D3DEEE] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] bg-white dark:bg-slate-900/50 px-4 py-3 md:p-7">
+          <UCard class="w-full rounded-2xl border border-[#D3DEEE] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] bg-white dark:bg-slate-900/50 px-4 py-3 md:p-4">
             <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
               {{ t('landing.features.items.2.title') }}
             </h3>
@@ -372,7 +372,7 @@ useSeoMeta({
             </div>
           </UCard>
 
-          <UCard class="w-full rounded-2xl border border-[#D3DEEE] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] bg-white dark:bg-slate-900/50 px-4 py-3 md:p-7">
+          <UCard class="w-full rounded-2xl border border-[#D3DEEE] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] bg-white dark:bg-slate-900/50 px-4 py-3 md:p-4">
             <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
               {{ t('landing.features.items.3.title') }}
             </h3>
@@ -386,7 +386,7 @@ useSeoMeta({
             </div>
           </UCard>
 
-          <UCard class="w-full rounded-2xl border border-[#D3DEEE] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] bg-white dark:bg-slate-900/50 px-4 py-3 md:p-7">
+          <UCard class="w-full rounded-2xl border border-[#D3DEEE] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] bg-white dark:bg-slate-900/50 px-4 py-3 md:p-4">
             <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
               {{ t('landing.features.items.4.title') }}
             </h3>
@@ -400,7 +400,7 @@ useSeoMeta({
             </div>
           </UCard>
 
-          <UCard class="w-full rounded-2xl border border-[#D3DEEE] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] bg-white dark:bg-slate-900/50 px-4 py-3 md:p-7">
+          <UCard class="w-full rounded-2xl border border-[#D3DEEE] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] bg-white dark:bg-slate-900/50 px-4 py-3 md:p-4">
             <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
               {{ t('landing.features.items.5.title') }}
             </h3>
