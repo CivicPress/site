@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://civic-press.org/sitemap.xml
