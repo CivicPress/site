@@ -718,9 +718,6 @@ useSeoMeta({
           {{ t('landing.roadmap.title') }}
         </h2>
 
-        <p class="text-base text-slate-600 dark:text-slate-200 leading-relaxed max-w-3xl text-center md:text-left mb-8">
-          {{ t('landing.roadmap.pilotsBody') }}
-        </p>
 
         <div class="space-y-8 text-center md:text-left">
           <!-- Current milestone block -->

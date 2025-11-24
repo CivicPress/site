@@ -56,6 +56,7 @@ useHead({
     { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
     { rel: 'manifest', href: '/manifest.webmanifest' },
     { rel: 'shortcut icon', href: '/favicon.ico' },
+    { rel: "mask-icon", color: "#4C7FD8", href: "/favicon.svg" },
     { key: 'canonical', rel: 'canonical', href: canonicalUrl.value },
     ...languageAlternates.value
   ]),
@@ -153,6 +154,9 @@ watch(locale, (newLocale) => {
             >
               {{ t('footerLinks.roadmap') }}
             </a>
+          </div>
+          <div class="text-center text-sm text-slate-500 dark:text-slate-400 mt-2">
+            Built with 💙 in Québec, Canada
           </div>
         </div>
       </UContainer>
