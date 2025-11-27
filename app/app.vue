@@ -77,15 +77,6 @@ useHead({
     lang: locale.value || 'en'
   }))
 })
-
-// Watch locale changes to update html lang attribute
-watch(locale, (newLocale) => {
-  useHead({
-    htmlAttrs: {
-      lang: newLocale || 'en'
-    }
-  })
-})
 </script>
 
 <template>

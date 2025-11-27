@@ -41,7 +41,7 @@
 ### Technical
 - ✅ TypeScript configuration
 - ✅ Tailwind CSS with custom CivicPress palette
-- ✅ Locale files in `i18n/locales/` with symlink
+- ✅ Locale files in `i18n/locales/` (auto-detected by Nuxt i18n module)
 - ✅ Static site generation ready
 - ✅ GitHub Pages deployment configuration
 
@@ -58,6 +58,5 @@
 
 ## Next Steps
 
-- Merge `fresh-nuxt-base` branch into `main`
 - Deploy to production
 - Monitor analytics and user feedback
