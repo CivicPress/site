@@ -138,7 +138,7 @@ watch(locale, (newLocale) => {
             </a>
             <span class="text-gray-300 dark:text-slate-600 hidden sm:inline">·</span>
             <a
-              href="https://github.com/CivicPress/manifesto/blob/main/manifesto.md"
+              :href="t('externalLinks.manifesto')"
               target="_blank"
               rel="noopener noreferrer"
               class="text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors py-1.5"
@@ -147,7 +147,7 @@ watch(locale, (newLocale) => {
             </a>
             <span class="text-gray-300 dark:text-slate-600 hidden sm:inline">·</span>
             <a
-              href="https://github.com/CivicPress/civicpress/blob/main/docs/roadmap.md"
+              :href="t('externalLinks.roadmap')"
               target="_blank"
               rel="noopener noreferrer"
               class="text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors py-1.5"
@@ -156,7 +156,7 @@ watch(locale, (newLocale) => {
             </a>
           </div>
           <div class="text-center text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Built with 💙 in Québec, Canada
+            {{ t('footerLinks.builtWith') }}
           </div>
         </div>
       </UContainer>

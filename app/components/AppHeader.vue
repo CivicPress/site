@@ -143,7 +143,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
 
       <UButton
         :label="t('navigation.primaryCta')"
-        to="https://demo.civicpress.io"
+        :to="t('externalLinks.demo')"
         target="_blank"
         size="sm"
         color="primary"
@@ -185,7 +185,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
           <div class="px-4 pb-4 pt-6">
             <UButton
               :label="t('navigation.primaryCta')"
-              to="https://demo.civicpress.io"
+              :to="t('externalLinks.demo')"
               target="_blank"
               color="primary"
               block

@@ -197,7 +197,7 @@ useSeoMeta({
 
           <div class="mt-8 flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-center lg:gap-3 w-full lg:w-auto hero-buttons">
             <UButton
-              to="https://demo.civicpress.io"
+              :to="t('externalLinks.demo')"
               size="lg"
               target="_blank"
               color="primary"
@@ -209,7 +209,7 @@ useSeoMeta({
               variant="ghost"
               color="primary"
               class="w-full lg:w-auto border border-[color:var(--cp-blue,#4C7FD8)] text-[color:var(--cp-blue,#4C7FD8)] hover:bg-[color:var(--cp-blue,#4C7FD8)] hover:text-white active:bg-[color:var(--cp-blue,#4C7FD8)] active:text-white focus:bg-[color:var(--cp-blue,#4C7FD8)] focus:text-white"
-              to="https://tally.so/r/wAYBvN"
+              :to="t('externalLinks.contributor')"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -959,7 +959,7 @@ useSeoMeta({
               size="lg"
               color="primary"
               class="w-full lg:w-auto bg-[color:var(--cp-blue,#4C7FD8)] hover:bg-[color:var(--cp-blue-hover,#3D72C7)] active:bg-[color:var(--cp-blue-hover,#3D72C7)] focus:bg-[color:var(--cp-blue-hover,#3D72C7)] border-transparent"
-              to="https://demo.civicpress.io"
+              :to="t('externalLinks.demo')"
               target="_blank"
             >
               {{ t('landing.cta.demo') }}
@@ -969,7 +969,7 @@ useSeoMeta({
               variant="ghost"
               color="primary"
               class="w-full lg:w-auto border border-[color:var(--cp-blue,#4C7FD8)] text-[color:var(--cp-blue,#4C7FD8)] hover:bg-[color:var(--cp-blue,#4C7FD8)] hover:text-white active:bg-[color:var(--cp-blue,#4C7FD8)] active:text-white focus:bg-[color:var(--cp-blue,#4C7FD8)] focus:text-white"
-              to="https://tally.so/r/wAYBvN"
+              :to="t('externalLinks.contributor')"
               target="_blank"
               rel="noopener noreferrer"
             >

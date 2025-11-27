@@ -47,6 +47,12 @@
     },
     "copyright": "Construit avec Nuxt UI • © {year}"
   },
+  "externalLinks": {
+    "demo": "https://demo-fr.civicpress.io",
+    "contributor": "https://tally.so/r/w4YKxo",
+    "manifesto": "https://github.com/CivicPress/manifesto/blob/main/manifesto.fr.md",
+    "roadmap": "https://github.com/CivicPress/civicpress/blob/main/docs/roadmap.md"
+  },
   "footerLinks": {
     "github": "GitHub",
     "mastodon": "Mastodon",
@@ -56,7 +62,8 @@
     "contactEmailDomain": "civicpress.io",
     "license": "Licence MIT",
     "manifesto": "Manifeste",
-    "roadmap": "Feuille de route"
+    "roadmap": "Feuille de route",
+    "builtWith": "Construit avec 💙 au Québec, Canada"
   },
   "landing": {
     "hero": {
