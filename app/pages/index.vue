@@ -20,6 +20,26 @@ const heroBadges = computed(() => {
   return []
 })
 
+const municipalLeadersCards = computed(() => {
+  const raw = tm('landing.municipalLeaders.cards') as unknown
+
+  if (Array.isArray(raw)) {
+    return raw.map((item) => {
+      if (typeof item === 'object' && item !== null) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const card = item as any
+        return {
+          title: typeof card.title === 'string' ? card.title : card.title?.body?.static ?? '',
+          body: typeof card.body === 'string' ? card.body : card.body?.body?.static ?? ''
+        }
+      }
+      return { title: '', body: '' }
+    })
+  }
+
+  return []
+})
+
 const showDemoSection = false
 
 // Page-specific SEO meta (overrides global defaults)
@@ -242,7 +262,7 @@ useSeoMeta({
     <section
       v-if="showDemoSection"
       id="demo"
-      class="py-10 sm:py-12 md:py-20 bg-white dark:bg-slate-950"
+      class="py-16 bg-white dark:bg-slate-950"
     >
       <UContainer class="max-w-4xl mx-auto text-center px-4 lg:px-0">
         <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white mb-6">
@@ -270,7 +290,7 @@ useSeoMeta({
     ============================ -->
     <section
       id="why-intro"
-      class="py-10 sm:py-12 md:py-24 bg-white dark:bg-slate-950"
+      class="py-16 bg-white dark:bg-slate-950"
     >
       <UContainer class="max-w-full md:max-w-3xl mx-auto px-4 lg:px-0">
         <h2 class="text-2xl sm:text-3xl md:text-3xl md:mt-16 md:mb-6 font-semibold tracking-tight text-gray-900 dark:text-slate-50 mb-4 text-center">
@@ -293,7 +313,7 @@ useSeoMeta({
     ============================ -->
     <section
       id="why-video"
-      class="py-10 sm:py-12 md:py-20 bg-slate-50 dark:bg-slate-900"
+      class="py-16 bg-slate-50 dark:bg-slate-900/30"
     >
       <UContainer class="max-w-full md:max-w-3xl mx-auto px-4 lg:px-0">
         <h2 class="text-2xl sm:text-3xl md:text-3xl md:mt-16 md:mb-6 font-semibold tracking-tight text-gray-900 dark:text-slate-50 mb-4 text-center">
@@ -317,12 +337,61 @@ useSeoMeta({
       </UContainer>
     </section>
 
+
+     <!-- ===========================
+         FOR MUNICIPAL LEADERS
+    ============================ -->
+    <section
+      id="municipal-leaders"
+      class="py-16 bg-white dark:bg-slate-950"
+    >
+      <UContainer class="max-w-5xl mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-10 md:mb-12">
+          <h2 class="text-2xl sm:text-3xl md:text-3xl font-semibold tracking-tight text-gray-900 dark:text-slate-50 mb-4">
+            {{ t('landing.municipalLeaders.title') }}
+          </h2>
+          <p class="text-base md:text-lg text-slate-600 dark:text-slate-200 leading-relaxed">
+            {{ t('landing.municipalLeaders.body') }}
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 mb-10 md:mb-12">
+          <div
+            v-for="(card, index) in municipalLeadersCards"
+            :key="index"
+            class="w-full rounded-2xl bg-white dark:bg-slate-900/50 border border-[#E1E6F0] dark:border-slate-700/60 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] px-4 py-3 md:p-6 text-left"
+          >
+            <h3 class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+              {{ card.title }}
+            </h3>
+            <p class="text-base text-slate-600 dark:text-slate-200 leading-relaxed">
+              {{ card.body }}
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            <UButton
+              :to="t('externalLinks.demo')"
+              target="_blank"
+              color="primary"
+              size="lg"
+              class="w-full sm:w-auto bg-[color:var(--cp-blue,#4C7FD8)] hover:bg-[color:var(--cp-blue-hover,#3D72C7)] border-transparent"
+            >
+              {{ t('landing.municipalLeaders.cta') }}
+            </UButton>
+          </div>
+        </div>
+      </UContainer>
+    </section>
+
     <!-- ===========================
          FEATURES
     ============================ -->
     <section
       id="features"
-      class="py-10 sm:py-12 md:py-20 bg-white dark:bg-slate-950"
+      class="py-16 bg-slate-50 dark:bg-slate-900/30"
     >
       <UContainer class="max-w-5xl mx-auto px-4">
         <h2 class="text-2xl sm:text-3xl md:text-3xl md:mt-16 md:mb-6 font-semibold tracking-tight text-gray-900 dark:text-slate-50 text-center max-w-3xl mx-auto mb-6">
@@ -422,7 +491,7 @@ useSeoMeta({
     ============================ -->
     <section
       id="how-it-works"
-      class="py-10 sm:py-12 md:py-20 bg-slate-50 dark:bg-slate-900"
+      class="py-16 bg-white dark:bg-slate-950"
     >
       <UContainer class="max-w-full md:max-w-3xl mx-auto px-4 lg:px-0">
         <h2 class="text-2xl sm:text-3xl md:text-3xl md:mt-16 md:mb-6 font-semibold tracking-tight text-gray-900 dark:text-slate-50 mb-4 text-center">
@@ -451,7 +520,7 @@ useSeoMeta({
     ============================ -->
     <section
       id="values"
-      class="relative overflow-hidden py-10 sm:py-12 md:py-20 bg-white dark:bg-slate-950"
+      class="relative overflow-hidden py-16 bg-slate-50 dark:bg-slate-900/30"
     >
       <!-- Subtle blueprint motif -->
       <svg
@@ -621,7 +690,7 @@ useSeoMeta({
     ============================ -->
     <section
       id="roadmap"
-      class="relative overflow-hidden py-10 sm:py-12 md:py-20 bg-slate-50 dark:bg-slate-900"
+      class="relative overflow-hidden py-16 bg-white dark:bg-slate-950"
     >
       <!-- Subtle blueprint motif -->
       <svg
@@ -763,7 +832,7 @@ useSeoMeta({
     <!-- 8. BUILT FOR THE PUBLIC, GOVERNED BY THE PUBLIC -->
     <section
       id="governance"
-      class="py-10 sm:py-12 md:py-20 bg-white dark:bg-slate-950"
+      class="py-16 bg-slate-50 dark:bg-slate-900/30"
     >
       <UContainer class="max-w-full md:max-w-3xl mx-auto px-4 lg:px-0">
         <h2 class="text-2xl sm:text-3xl md:text-3xl md:mt-16 md:mb-6 font-semibold tracking-tight text-gray-900 dark:text-slate-50 text-center mb-4">
@@ -795,7 +864,7 @@ useSeoMeta({
     </section>
 
     <!-- 9. FOUNDER / TEAM NOTE -->
-    <section class="py-10 sm:py-12 md:py-20 bg-slate-50 dark:bg-slate-900">
+    <section class="py-16 bg-white dark:bg-slate-950">
       <UContainer class="max-w-full md:max-w-3xl mx-auto px-4 lg:px-0">
         <h2 class="text-2xl sm:text-3xl md:text-3xl md:mt-16 md:mb-6 font-semibold tracking-tight text-gray-900 dark:text-slate-50 mb-4 text-center">
           {{ t('landing.founderNote.title') }}
@@ -815,7 +884,7 @@ useSeoMeta({
     <!-- 10. FAQ -->
     <section
       id="faq"
-      class="py-10 sm:py-12 md:py-20 bg-white dark:bg-slate-950"
+      class="py-16 bg-slate-50 dark:bg-slate-900/30"
     >
       <UContainer class="max-w-5xl mx-auto px-4">
         <h2 class="text-2xl sm:text-3xl md:text-3xl md:mt-16 md:mb-6 font-semibold tracking-tight mb-6 text-center text-gray-900 dark:text-slate-50">
@@ -869,80 +938,9 @@ useSeoMeta({
     <!-- 11. CTA -->
     <section
       id="cta"
-      class="relative overflow-hidden py-10 sm:py-12 md:py-20 bg-slate-50 dark:bg-slate-900"
+      class="relative overflow-hidden py-16 bg-white dark:bg-slate-950"
     >
-      <!-- Subtle blueprint background - Light mode -->
-      <svg
-        class="pointer-events-none absolute inset-0 h-full w-full dark:hidden"
-        viewBox="0 0 1440 400"
-        preserveAspectRatio="xMidYMid slice"
-        aria-hidden="true"
-      >
-        <defs>
-          <!-- Very light grid pattern -->
-          <pattern
-            id="cta-grid-light"
-            x="0"
-            y="0"
-            width="50"
-            height="50"
-            patternUnits="userSpaceOnUse"
-          >
-            <path
-              d="M 50 0 L 0 0 0 50"
-              fill="none"
-              stroke="#d7e3f7"
-              stroke-width="0.4"
-              stroke-opacity="0.05"
-            />
-          </pattern>
-          <!-- Very subtle radial fade -->
-          <radialGradient id="cta-fade-light" cx="50%" cy="50%" r="80%">
-            <stop offset="0%" stop-color="#F7F9FC" stop-opacity="1" />
-            <stop offset="100%" stop-color="#F7F9FC" stop-opacity="0.95" />
-          </radialGradient>
-        </defs>
-        <!-- Grid fill -->
-        <rect width="100%" height="100%" fill="url(#cta-grid-light)" />
-        <!-- Fading mask -->
-        <rect width="100%" height="100%" fill="url(#cta-fade-light)" />
-      </svg>
-      <!-- Subtle blueprint background - Dark mode -->
-      <svg
-        class="pointer-events-none absolute inset-0 hidden h-full w-full dark:block"
-        viewBox="0 0 1440 400"
-        preserveAspectRatio="xMidYMid slice"
-        aria-hidden="true"
-      >
-        <defs>
-          <!-- Very light grid pattern for dark mode -->
-          <pattern
-            id="cta-grid-dark"
-            x="0"
-            y="0"
-            width="50"
-            height="50"
-            patternUnits="userSpaceOnUse"
-          >
-            <path
-              d="M 50 0 L 0 0 0 50"
-              fill="none"
-              stroke="#475569"
-              stroke-width="0.4"
-              stroke-opacity="0.03"
-            />
-          </pattern>
-          <!-- Very subtle radial fade for dark mode -->
-          <radialGradient id="cta-fade-dark" cx="50%" cy="50%" r="80%">
-            <stop offset="0%" stop-color="#0F172A" stop-opacity="1" />
-            <stop offset="100%" stop-color="#0F172A" stop-opacity="0.98" />
-          </radialGradient>
-        </defs>
-        <!-- Grid fill -->
-        <rect width="100%" height="100%" fill="url(#cta-grid-dark)" />
-        <!-- Fading mask -->
-        <rect width="100%" height="100%" fill="url(#cta-fade-dark)" />
-      </svg>
+     
 
       <UContainer class="relative max-w-4xl mx-auto px-4 lg:px-0">
         <UCard class="w-full rounded-2xl border border-[#E1E6F0] dark:border-slate-700/60 bg-white dark:bg-slate-900/50 shadow-sm dark:shadow-[0_1px_3px_0_rgb(0_0_0_/_0.3)] px-6 py-8 md:px-8 md:py-10 text-center">

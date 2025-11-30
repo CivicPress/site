@@ -145,6 +145,15 @@ useHead({
             >
               {{ t('footerLinks.roadmap') }}
             </a>
+            <span class="text-gray-300 dark:text-slate-600 hidden sm:inline">·</span>
+            <a
+              :href="t('externalLinks.media')"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors py-1.5"
+            >
+              {{ t('footerLinks.media') }}
+            </a>
           </div>
           <div class="text-center text-sm text-slate-500 dark:text-slate-400 mt-2">
             {{ t('footerLinks.builtWith') }}

@@ -51,7 +51,8 @@
     "demo": "https://demo-fr.civicpress.io",
     "contributor": "https://tally.so/r/w4YKxo",
     "manifesto": "https://github.com/CivicPress/manifesto/blob/main/manifesto.fr.md",
-    "roadmap": "https://github.com/CivicPress/civicpress/blob/main/docs/roadmap.md"
+    "roadmap": "https://github.com/CivicPress/civicpress/blob/main/docs/roadmap.md",
+    "media": "https://github.com/CivicPress/media"
   },
   "footerLinks": {
     "github": "GitHub",
@@ -63,6 +64,7 @@
     "license": "Licence MIT",
     "manifesto": "Manifeste",
     "roadmap": "Feuille de route",
+    "media": "Média",
     "builtWith": "Construit avec 💙 au Québec, Canada"
   },
   "landing": {
@@ -170,6 +172,29 @@
       "demo": "Essayer la démo",
       "contribute": "Rejoindre en tant que contributeur",
       "contributeSubtitle": "Essayez la démo ou rejoignez les contributeurs qui aident à construire une infrastructure civique ouverte."
+    },
+    "municipalLeaders": {
+      "title": "Pour les directions générales, greffes et équipes administratives",
+      "body": "Les municipalités portent des décennies de décisions, de règlements et de plans. Pourtant, une grande partie de cette histoire reste enfermée dans des PDF, d'anciens portails ou des dossiers que seul le personnel peut retrouver. CivicPress transforme cette complexité en un registre public clair, durable et fiable, sans ajouter de travail supplémentaire.",
+      "cards": [
+        {
+          "title": "Conçu pour le vrai travail du personnel municipal",
+          "body": "Les employés municipaux n'ont pas besoin de plus de systèmes à maintenir. Ils ont besoin de moins d'obstacles. CivicPress réduit le temps passé à chercher un document, les allers-retours entre différentes versions, et les étapes répétitives de mise en ligne. Il diminue la dépendance aux vieux portails, réduit le stress en réunion de conseil et reste simple à utiliser, même pour une petite équipe."
+        },
+        {
+          "title": "Un registre civique unifié auquel votre communauté peut faire confiance",
+          "body": "CivicPress est plus qu'un outil de publication — c'est une infrastructure civique numérique. Il fournit une structure cohérente pour les règlements, procès-verbaux, ordres du jour, avis et résolutions, avec une navigation claire que les citoyens peuvent comprendre. Le versionnement automatique soutenu par Git préserve un historique vérifiable, et des liens clairs entre documents, réunions et décisions apportent transparence et ordre aux dossiers qui façonnent la vie quotidienne."
+        },
+        {
+          "title": "Réduire la charge de travail de la CAI et améliorer la conformité",
+          "body": "Les demandes d'accès à l'information (CAI) augmentent et les délais sont stricts. CivicPress aide les municipalités à respecter leurs obligations en rendant les documents clairs, organisés et accessibles - réduisant souvent le besoin de demandes formelles de CAI en premier lieu. Cela renforce la conformité, la capacité du personnel, la confiance des citoyens et une culture de transparence. Moins de temps à chercher. Plus de temps à servir la communauté."
+        },
+        {
+          "title": "Souveraineté numérique, intégrée",
+          "body": "CivicPress protège l'indépendance numérique de votre municipalité. La plateforme peut fonctionner localement à l'hôtel de ville, dans le nuage ou en mode hybride, toujours avec les mêmes formats ouverts (Markdown, CSV, GeoJSON). Il n'y a pas de verrouillage fournisseur : vos données restent exportables, votre architecture reste transparente, et vos registres demeurent sous contrôle municipal. C'est la souveraineté numérique appliquée, concrètement, aux dossiers publics."
+        }
+      ],
+      "cta": "Voir la démo en ligne"
     },
     "publicGovernance": {
       "title": "Construit pour le public, géré par le public",

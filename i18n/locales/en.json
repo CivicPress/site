@@ -49,7 +49,8 @@
     "demo": "https://demo-en.civicpress.io",
     "contributor": "https://tally.so/r/wAYBvN",
     "manifesto": "https://github.com/CivicPress/manifesto/blob/main/manifesto.md",
-    "roadmap": "https://github.com/CivicPress/civicpress/blob/main/docs/roadmap.md"
+    "roadmap": "https://github.com/CivicPress/civicpress/blob/main/docs/roadmap.md",
+    "media": "https://github.com/CivicPress/media"
   },
   "footerLinks": {
     "github": "GitHub",
@@ -61,6 +62,7 @@
     "license": "MIT License",
     "manifesto": "Manifesto",
     "roadmap": "Roadmap",
+    "media": "Media",
     "builtWith": "Built with 💙 in Québec, Canada"
   },
   "landing": {
@@ -168,6 +170,29 @@
       "demo": "Try the demo",
       "contribute": "Join as a contributor",
       "contributeSubtitle": "Try the demo or join the contributors helping to build open civic infrastructure."
+    },
+    "municipalLeaders": {
+      "title": "Modern transparency. Less work. Better service for citizens.",
+      "body": "Municipalities carry decades of decisions, bylaws, plans, and public commitments. Yet much of this history remains locked inside PDFs, old portals, and folders only staff can navigate. CivicPress transforms this complexity into a clear, durable, and trustworthy public record - without adding extra work.",
+      "cards": [
+        {
+          "title": "Designed for the real work of municipal staff",
+          "body": "Municipal employees don't need more systems to maintain. They need fewer obstacles. CivicPress reduces time spent searching for documents, confusion caused by multiple versions, repetitive publishing steps, dependency on outdated platforms, and stress during council meetings or audits. It's simple to operate, quick to learn, and reliable for years."
+        },
+        {
+          "title": "A unified civic registry your community can trust",
+          "body": "CivicPress is more than a publishing tool - it is digital civic infrastructure. It provides a consistent structure for bylaws, minutes, agendas, notices, and resolutions, with clean navigation that citizens can actually understand. Automatic versioning backed by Git keeps a verifiable history, and clear links between documents, meetings, and decisions bring order and transparency to the records that shape daily life."
+        },
+        {
+          "title": "Reduce CAI workload and improve compliance",
+          "body": "Access-to-information (CAI) requests are rising, and deadlines are strict. CivicPress helps municipalities meet their obligations by making documents clear, organized, and accessible - often reducing the need for formal CAI requests in the first place. This strengthens compliance, staff capacity, citizen trust, and a culture of transparency. Less time searching. More time serving the community."
+        },
+        {
+          "title": "Digital sovereignty, built-in",
+          "body": "CivicPress protects your municipality's independence and long-term stability. It can run locally in your town hall, in the cloud, or in a hybrid setup - and it relies only on open formats like Markdown, CSV, and GeoJSON. There is no vendor lock-in: your data is always exportable, your stack is transparent, and your civic records belong to your community, not to a supplier."
+        }
+      ],
+      "cta": "View the online demo"
     },
     "publicGovernance": {
       "title": "Built for the public, governed by the public",
