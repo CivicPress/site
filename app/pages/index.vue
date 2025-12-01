@@ -370,18 +370,16 @@ useSeoMeta({
           </div>
         </div>
 
-        <div class="text-center">
-          <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <UButton
-              :to="t('externalLinks.demo')"
-              target="_blank"
-              color="primary"
-              size="lg"
-              class="w-full sm:w-auto bg-[color:var(--cp-blue,#4C7FD8)] hover:bg-[color:var(--cp-blue-hover,#3D72C7)] border-transparent"
-            >
-              {{ t('landing.municipalLeaders.cta') }}
-            </UButton>
-          </div>
+        <div class="flex flex-col items-center gap-2 lg:flex-row lg:justify-center lg:gap-3 w-full lg:w-auto municipal-leaders-button">
+          <UButton
+            :to="t('externalLinks.demo')"
+            target="_blank"
+            color="primary"
+            size="lg"
+            class="w-full lg:w-auto bg-[color:var(--cp-blue,#4C7FD8)] hover:bg-[color:var(--cp-blue-hover,#3D72C7)] active:bg-[color:var(--cp-blue-hover,#3D72C7)] focus:bg-[color:var(--cp-blue-hover,#3D72C7)] border-transparent"
+          >
+            {{ t('landing.municipalLeaders.cta') }}
+          </UButton>
         </div>
       </UContainer>
     </section>
@@ -1003,6 +1001,19 @@ useSeoMeta({
 
 .cta-buttons :deep(button > span),
 .cta-buttons :deep(a > span) {
+  text-align: center !important;
+  width: 100%;
+}
+
+/* Force center alignment for municipal leaders button */
+.municipal-leaders-button :deep(button),
+.municipal-leaders-button :deep(a) {
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.municipal-leaders-button :deep(button > span),
+.municipal-leaders-button :deep(a > span) {
   text-align: center !important;
   width: 100%;
 }
